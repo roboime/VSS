@@ -18,8 +18,8 @@
 			<Item Name="SSL Geometry Field Size.ctl" Type="VI" URL="../SSL Geometry Field Size.ctl"/>
 		</Item>
 		<Item Name="GUI" Type="Folder">
-			<Item Name="Field.vi" Type="VI" URL="../Field.vi"/>
 			<Item Name="SSL Vision Client.vi" Type="VI" URL="../SSL Vision Client.vi"/>
+			<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
 		</Item>
 		<Item Name="SubVI" Type="Folder">
 			<Item Name="Decode Balls.vi" Type="VI" URL="../Decode Balls.vi"/>
@@ -28,6 +28,7 @@
 			<Item Name="Double Decoder.vi" Type="VI" URL="../Double Decoder.vi"/>
 			<Item Name="Field Draw Ball.vi" Type="VI" URL="../Field Draw Ball.vi"/>
 			<Item Name="Field Draw Robot.vi" Type="VI" URL="../Field Draw Robot.vi"/>
+			<Item Name="Field.vi" Type="VI" URL="../Field.vi"/>
 			<Item Name="Float Decoder.vi" Type="VI" URL="../Float Decoder.vi"/>
 			<Item Name="Length-delimited Decoder.vi" Type="VI" URL="../Length-delimited Decoder.vi"/>
 			<Item Name="Proto Key And Type.vi" Type="VI" URL="../Proto Key And Type.vi"/>
@@ -35,11 +36,11 @@
 			<Item Name="SSL Detection Frame.vi" Type="VI" URL="../SSL Detection Frame.vi"/>
 			<Item Name="SSL Detection Robot.vi" Type="VI" URL="../SSL Detection Robot.vi"/>
 			<Item Name="SSL Geometry Data.vi" Type="VI" URL="../SSL Geometry Data.vi"/>
-			<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
 			<Item Name="Varint Base128 Decoder.vi" Type="VI" URL="../Varint Base128 Decoder.vi"/>
 			<Item Name="Varint Decoder uint32.vi" Type="VI" URL="../Varint Decoder uint32.vi"/>
 			<Item Name="Varint Decoder.vi" Type="VI" URL="../Varint Decoder.vi"/>
 		</Item>
+		<Item Name="Varint Decoder uint64.vi" Type="VI" URL="../Varint Decoder uint64.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
