@@ -34,8 +34,16 @@
 			<Item Name="Field.vi" Type="VI" URL="../Field.vi"/>
 			<Item Name="Float Decoder.vi" Type="VI" URL="../Float Decoder.vi"/>
 			<Item Name="Length-delimited Decoder.vi" Type="VI" URL="../Length-delimited Decoder.vi"/>
+			<Item Name="Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib"/>
 			<Item Name="Proto Key And Type.vi" Type="VI" URL="../Proto Key And Type.vi"/>
+			<Item Name="SSL Detection Ball Closest.vi" Type="VI" URL="../SSL Detection Ball Closest.vi"/>
+			<Item Name="SSL Detection Ball Coordinate.vi" Type="VI" URL="../SSL Detection Ball Coordinate.vi"/>
+			<Item Name="SSL Detection Ball Distance.vi" Type="VI" URL="../SSL Detection Ball Distance.vi"/>
 			<Item Name="SSL Detection Ball.vi" Type="VI" URL="../SSL Detection Ball.vi"/>
+			<Item Name="SSL Detection Balls Delete Invalids.vi" Type="VI" URL="../SSL Detection Balls Delete Invalids.vi"/>
+			<Item Name="SSL Detection Balls Invalidate.vi" Type="VI" URL="../SSL Detection Balls Invalidate.vi"/>
+			<Item Name="SSL Detection Frame Balls Estimator.vi" Type="VI" URL="../SSL Detection Frame Balls Estimator.vi"/>
+			<Item Name="SSL Detection Frame Simple Estimator.vi" Type="VI" URL="../SSL Detection Frame Simple Estimator.vi"/>
 			<Item Name="SSL Detection Frame.vi" Type="VI" URL="../SSL Detection Frame.vi"/>
 			<Item Name="SSL Detection Robot.vi" Type="VI" URL="../SSL Detection Robot.vi"/>
 			<Item Name="SSL Geometry Data.vi" Type="VI" URL="../SSL Geometry Data.vi"/>
@@ -53,6 +61,7 @@
 				<Item Name="Lossy Behavior.ctl" Type="VI" URL="/&lt;vilib&gt;/ChannelSupport/Lossy Behavior.ctl"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
 				<Item Name="LVPositionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPositionTypeDef.ctl"/>
+				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
@@ -64,7 +73,7 @@
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="ChannelProbePositionAndTitle.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbePositionAndTitle.vi"/>
 			<Item Name="ChannelProbeWindowStagger.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbeWindowStagger.vi"/>
-			<Item Name="Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib"/>
+			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="PipeLogic.lvclass" Type="LVClass" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/PipeLogic/PipeLogic.lvclass"/>
 			<Item Name="ProbeFormatting.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ProbeSupport/ProbeFormatting.vi"/>
 			<Item Name="Stream-a[.](u8).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Stream-a[.](u8).lvlib"/>
