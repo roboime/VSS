@@ -18,7 +18,6 @@
 			<Item Name="SSL Geometry Field Size.ctl" Type="VI" URL="../SSL Geometry Field Size.ctl"/>
 		</Item>
 		<Item Name="GUI" Type="Folder">
-			<Item Name="SSL Vision Client.vi" Type="VI" URL="../SSL Vision Client.vi"/>
 			<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
 		</Item>
 		<Item Name="SubVI" Type="Folder">
@@ -43,24 +42,31 @@
 			<Item Name="SSL Detection Balls Delete Invalids.vi" Type="VI" URL="../SSL Detection Balls Delete Invalids.vi"/>
 			<Item Name="SSL Detection Balls Invalidate.vi" Type="VI" URL="../SSL Detection Balls Invalidate.vi"/>
 			<Item Name="SSL Detection Frame Balls Estimator.vi" Type="VI" URL="../SSL Detection Frame Balls Estimator.vi"/>
+			<Item Name="SSL Detection Frame Robots Estimator.vi" Type="VI" URL="../SSL Detection Frame Robots Estimator.vi"/>
 			<Item Name="SSL Detection Frame Simple Estimator.vi" Type="VI" URL="../SSL Detection Frame Simple Estimator.vi"/>
 			<Item Name="SSL Detection Frame.vi" Type="VI" URL="../SSL Detection Frame.vi"/>
 			<Item Name="SSL Detection Robot.vi" Type="VI" URL="../SSL Detection Robot.vi"/>
+			<Item Name="SSL Detection Robots Delete Invalids.vi" Type="VI" URL="../SSL Detection Robots Delete Invalids.vi"/>
+			<Item Name="SSL Detection Robots Invalidate.vi" Type="VI" URL="../SSL Detection Robots Invalidate.vi"/>
 			<Item Name="SSL Geometry Data.vi" Type="VI" URL="../SSL Geometry Data.vi"/>
+			<Item Name="SSL Vision Client.vi" Type="VI" URL="../SSL Vision Client.vi"/>
 			<Item Name="Varint Base128 Decoder.vi" Type="VI" URL="../Varint Base128 Decoder.vi"/>
 			<Item Name="Varint Decoder uint32.vi" Type="VI" URL="../Varint Decoder uint32.vi"/>
 			<Item Name="Varint Decoder uint64.vi" Type="VI" URL="../Varint Decoder uint64.vi"/>
 			<Item Name="Varint Decoder.vi" Type="VI" URL="../Varint Decoder.vi"/>
 		</Item>
+		<Item Name="SSL Log Sync.vi" Type="VI" URL="../SSL Log Sync.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
 				<Item Name="Draw Circle by Radius.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Draw Circle by Radius.vi"/>
+				<Item Name="Draw Line.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Line.vi"/>
 				<Item Name="Draw Rectangle.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Rectangle.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Lossy Behavior.ctl" Type="VI" URL="/&lt;vilib&gt;/ChannelSupport/Lossy Behavior.ctl"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
 				<Item Name="LVPositionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPositionTypeDef.ctl"/>
+				<Item Name="Move Pen.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Move Pen.vi"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
