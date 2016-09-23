@@ -16,6 +16,7 @@
 			<Item Name="SSL Detection Robot.ctl" Type="VI" URL="../SSL Detection Robot.ctl"/>
 			<Item Name="SSL Geometry Camera Calibration.ctl" Type="VI" URL="../SSL Geometry Camera Calibration.ctl"/>
 			<Item Name="SSL Geometry Field Size.ctl" Type="VI" URL="../SSL Geometry Field Size.ctl"/>
+			<Item Name="SSL Referee Game Status.ctl" Type="VI" URL="../SSL Referee Game Status.ctl"/>
 		</Item>
 		<Item Name="GUI" Type="Folder">
 			<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
@@ -49,13 +50,13 @@
 			<Item Name="SSL Detection Robots Delete Invalids.vi" Type="VI" URL="../SSL Detection Robots Delete Invalids.vi"/>
 			<Item Name="SSL Detection Robots Invalidate.vi" Type="VI" URL="../SSL Detection Robots Invalidate.vi"/>
 			<Item Name="SSL Geometry Data.vi" Type="VI" URL="../SSL Geometry Data.vi"/>
+			<Item Name="SSL Log Sync.vi" Type="VI" URL="../SSL Log Sync.vi"/>
 			<Item Name="SSL Vision Client.vi" Type="VI" URL="../SSL Vision Client.vi"/>
 			<Item Name="Varint Base128 Decoder.vi" Type="VI" URL="../Varint Base128 Decoder.vi"/>
 			<Item Name="Varint Decoder uint32.vi" Type="VI" URL="../Varint Decoder uint32.vi"/>
 			<Item Name="Varint Decoder uint64.vi" Type="VI" URL="../Varint Decoder uint64.vi"/>
 			<Item Name="Varint Decoder.vi" Type="VI" URL="../Varint Decoder.vi"/>
 		</Item>
-		<Item Name="SSL Log Sync.vi" Type="VI" URL="../SSL Log Sync.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
