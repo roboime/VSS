@@ -61,10 +61,13 @@
 					<Item Name="Varint Encoder.vi" Type="VI" URL="../Varint Encoder.vi"/>
 					<Item Name="Varint Base128 Encoder.vi" Type="VI" URL="../Varint Base128 Encoder.vi"/>
 					<Item Name="Varint Encoder uint32.vi" Type="VI" URL="../Varint Encoder uint32.vi"/>
+					<Item Name="Length Delimited Encoder.vi" Type="VI" URL="../ProtoBuf/Length Delimited Encoder.vi"/>
 					<Item Name="Bool Encoder.vi" Type="VI" URL="../Bool Encoder.vi"/>
 				</Item>
 			</Item>
-			<Item Name="grSIM" Type="Folder"/>
+			<Item Name="grSim" Type="Folder" URL="../grSim">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
 			<Item Name="Util" Type="Folder">
 				<Item Name="SSL Detection Ball Closest.vi" Type="VI" URL="../SSL Detection Ball Closest.vi"/>
 				<Item Name="SSL Detection Ball Coordinate.vi" Type="VI" URL="../SSL Detection Ball Coordinate.vi"/>
@@ -85,8 +88,8 @@
 				<Item Name="SSL Detection Points Referee.vi" Type="VI" URL="../SSL Detection Points Referee.vi"/>
 				<Item Name="SSL Detection Robot Referee.vi" Type="VI" URL="../SSL Detection Robot Referee.vi"/>
 			</Item>
-			<Item Name="Trash" Type="Folder">
-				<Item Name="SSL Vision Client.vi" Type="VI" URL="../SSL Vision Client.vi"/>
+			<Item Name="Trash" Type="Folder" URL="../Trash">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
 		</Item>
 		<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
