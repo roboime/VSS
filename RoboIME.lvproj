@@ -41,6 +41,7 @@
 				<Item Name="Decode SSL Wrapper Package.vi" Type="VI" URL="../Decode SSL Wrapper Package.vi"/>
 				<Item Name="Decode Robots.vi" Type="VI" URL="../Decode Robots.vi"/>
 				<Item Name="Decode Balls.vi" Type="VI" URL="../Decode Balls.vi"/>
+				<Item Name="SSL UDP Receiver.vi" Type="VI" URL="../SSL/SSL UDP Receiver.vi"/>
 			</Item>
 			<Item Name="ProtoBuf" Type="Folder">
 				<Item Name="Decoder" Type="Folder">
@@ -93,6 +94,7 @@
 			</Item>
 		</Item>
 		<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
+		<Item Name="SSL Log Reader.vi" Type="VI" URL="../SSL/SSL Log Reader.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
@@ -123,6 +125,7 @@
 			<Item Name="ChannelProbeWindowStagger.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbeWindowStagger.vi"/>
 			<Item Name="Stream.lvlib" Type="Library" URL="/&lt;resource&gt;/Channels/Stream/Stream.lvlib"/>
 			<Item Name="Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib"/>
+			<Item Name="Lossy Stream-a[.](u8).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-a[.](u8).lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
