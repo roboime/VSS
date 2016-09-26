@@ -42,6 +42,7 @@
 				<Item Name="Decode Robots.vi" Type="VI" URL="../Decode Robots.vi"/>
 				<Item Name="Decode Balls.vi" Type="VI" URL="../Decode Balls.vi"/>
 				<Item Name="SSL UDP Receiver.vi" Type="VI" URL="../SSL/SSL UDP Receiver.vi"/>
+				<Item Name="SSL Log Reader.vi" Type="VI" URL="../SSL/SSL Log Reader.vi"/>
 			</Item>
 			<Item Name="ProtoBuf" Type="Folder">
 				<Item Name="Decoder" Type="Folder">
@@ -94,7 +95,6 @@
 			</Item>
 		</Item>
 		<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
-		<Item Name="SSL Log Reader.vi" Type="VI" URL="../SSL/SSL Log Reader.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
