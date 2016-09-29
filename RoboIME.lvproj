@@ -22,6 +22,9 @@
 			<Item Name="SSL Referee Team Info.ctl" Type="VI" URL="../SSL Referee Team Info.ctl"/>
 		</Item>
 		<Item Name="SubVI" Type="Folder">
+			<Item Name="Control" Type="Folder" URL="../Control">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
 			<Item Name="GUI" Type="Folder">
 				<Item Name="Field Draw Ball.vi" Type="VI" URL="../Field Draw Ball.vi"/>
 				<Item Name="Field Draw Balls.vi" Type="VI" URL="../Field Draw Balls.vi"/>
@@ -91,6 +94,9 @@
 			<Item Name="Trash" Type="Folder" URL="../Trash">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Test" Type="Folder" URL="../Test">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -112,6 +118,9 @@
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
+				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
+				<Item Name="NI_PID_pid.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID_pid.lvlib"/>
+				<Item Name="lvpidtkt.dll" Type="Document" URL="/&lt;vilib&gt;/addons/control/pid/lvpidtkt.dll"/>
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
