@@ -97,9 +97,14 @@
 			<Item Name="Test" Type="Folder" URL="../Test">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Core" Type="Folder" URL="../Core">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Intel" Type="Folder" URL="../Intel">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
-		<Item Name="lado-cor.vi" Type="VI" URL="../GUI/lado-cor.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
@@ -136,6 +141,8 @@
 			<Item Name="ChannelProbeWindowStagger.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbeWindowStagger.vi"/>
 			<Item Name="Stream.lvlib" Type="Library" URL="/&lt;resource&gt;/Channels/Stream/Stream.lvlib"/>
 			<Item Name="Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib"/>
+			<Item Name="Lossy Stream-t&apos;SSL Referee Game Status.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;SSL Referee Game Status.ctl&apos;.lvlib"/>
+			<Item Name="Lossy Stream-t&apos;AI Input.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;AI Input.ctl&apos;.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
