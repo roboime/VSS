@@ -100,6 +100,9 @@
 			<Item Name="Core" Type="Folder" URL="../Core">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Intel" Type="Folder" URL="../Intel">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
 		<Item Name="Field Size.ctl" Type="VI" URL="../Field Size.ctl"/>
