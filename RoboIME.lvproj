@@ -29,6 +29,11 @@
 			<Item Name="Decode Robots.vi" Type="VI" URL="../Decode Robots.vi"/>
 			<Item Name="Decode SSL Wrapper Package.vi" Type="VI" URL="../Decode SSL Wrapper Package.vi"/>
 			<Item Name="Double Decoder.vi" Type="VI" URL="../Double Decoder.vi"/>
+			<Item Name="estimador de posicao.vi" Type="VI" URL="../estimador de posicao.vi"/>
+			<Item Name="estimador velocidade robo.vi" Type="VI" URL="../estimador velocidade robo.vi"/>
+			<Item Name="estimador velocidade bola.vi" Type="VI" URL="../estimador velocidade bola.vi"/>
+			<Item Name="estimador de velocidades.vi" Type="VI" URL="../estimador de velocidades.vi"/>
+			<Item Name="teste do estimador de velocidade.vi" Type="VI" URL="../teste do estimador de velocidade.vi"/>
 			<Item Name="Field Draw Ball.vi" Type="VI" URL="../Field Draw Ball.vi"/>
 			<Item Name="Field Draw Balls.vi" Type="VI" URL="../Field Draw Balls.vi"/>
 			<Item Name="Field Draw Field.vi" Type="VI" URL="../Field Draw Field.vi"/>
@@ -64,7 +69,8 @@
 			<Item Name="Referee.vi" Type="VI" URL="../Referee.vi"/>
 			<Item Name="Varint Decoder sint32.vi" Type="VI" URL="../Varint Decoder sint32.vi"/>
 			<Item Name="SSL Referee Stage to GUI Stage.vi" Type="VI" URL="../SSL Referee Stage to GUI Stage.vi"/>
-			<Item Name="estimador velocidade bola.vi" Type="VI" URL="../estimador velocidade bola.vi"/>
+			<Item Name="velocidade media.vi" Type="VI" URL="../velocidade media.vi"/>
+			<Item Name="velocidade angular media.vi" Type="VI" URL="../velocidade angular media.vi"/>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -99,7 +105,6 @@
 			<Item Name="ChannelProbePositionAndTitle.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbePositionAndTitle.vi"/>
 			<Item Name="ChannelProbeWindowStagger.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbeWindowStagger.vi"/>
 			<Item Name="Stream.lvlib" Type="Library" URL="/&lt;resource&gt;/Channels/Stream/Stream.lvlib"/>
-			<Item Name="velocidade media.vi" Type="VI" URL="../velocidade media.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
