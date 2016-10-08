@@ -72,6 +72,18 @@
 			<Item Name="velocidade media.vi" Type="VI" URL="../velocidade media.vi"/>
 			<Item Name="velocidade angular media.vi" Type="VI" URL="../velocidade angular media.vi"/>
 		</Item>
+		<Item Name="Kalman Filter" Type="Folder">
+			<Item Name="calculate f comp.vi" Type="VI" URL="../../wheel control - LabView/calculate f comp.vi"/>
+			<Item Name="calculo de f_k.vi" Type="VI" URL="../../wheel control - LabView/calculo de f_k.vi"/>
+			<Item Name="check slipping wheels.vi" Type="VI" URL="../../wheel control - LabView/check slipping wheels.vi"/>
+			<Item Name="control.vi" Type="VI" URL="../../wheel control - LabView/control.vi"/>
+			<Item Name="correct slipping wheels.vi" Type="VI" URL="../../wheel control - LabView/correct slipping wheels.vi"/>
+			<Item Name="estimate covariance.vi" Type="VI" URL="../../wheel control - LabView/estimate covariance.vi"/>
+			<Item Name="innovation covariance.vi" Type="VI" URL="../../wheel control - LabView/innovation covariance.vi"/>
+			<Item Name="kalman filter2.vi" Type="VI" URL="../../wheel control - LabView/kalman filter2.vi"/>
+			<Item Name="kalman gain.vi" Type="VI" URL="../../wheel control - LabView/kalman gain.vi"/>
+			<Item Name="measurement residual.vi" Type="VI" URL="../../wheel control - LabView/measurement residual.vi"/>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
@@ -91,6 +103,8 @@
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
+				<Item Name="NI_Matrix.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/Matrix/NI_Matrix.lvlib"/>
+				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
@@ -105,6 +119,11 @@
 			<Item Name="ChannelProbePositionAndTitle.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbePositionAndTitle.vi"/>
 			<Item Name="ChannelProbeWindowStagger.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbeWindowStagger.vi"/>
 			<Item Name="Stream.lvlib" Type="Library" URL="/&lt;resource&gt;/Channels/Stream/Stream.lvlib"/>
+			<Item Name="Float Decoder.vi" Type="VI" URL="../../../../../Desktop/ROBOIME/SSLView/Float Decoder.vi"/>
+			<Item Name="new velocities.vi" Type="VI" URL="../../wheel control - LabView/new velocities.vi"/>
+			<Item Name="omni_equations.vi" Type="VI" URL="../../wheel control - LabView/omni_equations.vi"/>
+			<Item Name="predict state.vi" Type="VI" URL="../../wheel control - LabView/predict state.vi"/>
+			<Item Name="posterior estimate covariance.vi" Type="VI" URL="../../wheel control - LabView/posterior estimate covariance.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
