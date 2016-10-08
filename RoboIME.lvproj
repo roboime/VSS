@@ -64,6 +64,7 @@
 			<Item Name="Referee.vi" Type="VI" URL="../Referee.vi"/>
 			<Item Name="Varint Decoder sint32.vi" Type="VI" URL="../Varint Decoder sint32.vi"/>
 			<Item Name="SSL Referee Stage to GUI Stage.vi" Type="VI" URL="../SSL Referee Stage to GUI Stage.vi"/>
+			<Item Name="estimador velocidade bola.vi" Type="VI" URL="../estimador velocidade bola.vi"/>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -87,6 +88,10 @@
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
+			<Item Name="Decode Robots Referee.vi" Type="VI" URL="../Decode Robots Referee.vi"/>
+			<Item Name="Decode Points Referee.vi" Type="VI" URL="../Decode Points Referee.vi"/>
+			<Item Name="SSL Detection Points Referee.vi" Type="VI" URL="../SSL Detection Points Referee.vi"/>
+			<Item Name="SSL Detection Robot Referee.vi" Type="VI" URL="../SSL Detection Robot Referee.vi"/>
 			<Item Name="PipeLogic.lvclass" Type="LVClass" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/PipeLogic/PipeLogic.lvclass"/>
 			<Item Name="Stream-a[.](u8).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Stream-a[.](u8).lvlib"/>
 			<Item Name="Update Probe Details String.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ProbeSupport/Update Probe Details String.vi"/>
@@ -94,10 +99,7 @@
 			<Item Name="ChannelProbePositionAndTitle.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbePositionAndTitle.vi"/>
 			<Item Name="ChannelProbeWindowStagger.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbeWindowStagger.vi"/>
 			<Item Name="Stream.lvlib" Type="Library" URL="/&lt;resource&gt;/Channels/Stream/Stream.lvlib"/>
-			<Item Name="Decode Robots Referee.vi" Type="VI" URL="../Decode Robots Referee.vi"/>
-			<Item Name="Decode Points Referee.vi" Type="VI" URL="../Decode Points Referee.vi"/>
-			<Item Name="SSL Detection Points Referee.vi" Type="VI" URL="../SSL Detection Points Referee.vi"/>
-			<Item Name="SSL Detection Robot Referee.vi" Type="VI" URL="../SSL Detection Robot Referee.vi"/>
+			<Item Name="velocidade media.vi" Type="VI" URL="../velocidade media.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
