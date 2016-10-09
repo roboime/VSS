@@ -95,6 +95,15 @@
 			<Item Name="Trash" Type="Folder" URL="../Trash">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Intel" Type="Folder" URL="../Intel">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Core" Type="Folder" URL="../Core">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Filters" Type="Folder" URL="../Filters">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
 		<Item Name="SSL Vision Package Selector.vi" Type="VI" URL="../SSL/SSL Vision Package Selector.vi"/>
@@ -103,7 +112,6 @@
 		<Item Name="Get Pose.vi" Type="VI" URL="../Util/Get Pose.vi"/>
 		<Item Name="SSL Detection Frame Balls Kalman Estimator.vi" Type="VI" URL="../SSL/SSL Detection Frame Balls Kalman Estimator.vi"/>
 		<Item Name="SSL Vision Log Player_Before_48ba08720c56c0a8b7144770c98b40c29f58bcd1.vi" Type="VI" URL="/C/Users/cadre/AppData/Local/Temp/SSL Vision Log Player_Before_48ba08720c56c0a8b7144770c98b40c29f58bcd1.vi"/>
-		<Item Name="Kalman Calculation.vi" Type="VI" URL="../Filters/Kalman Calculation.vi"/>
 		<Item Name="Update Ball Pose.vi" Type="VI" URL="../Util/Update Ball Pose.vi"/>
 		<Item Name="SSL Detection Balls Delete Invalids with State and Cov.vi" Type="VI" URL="../Util/SSL Detection Balls Delete Invalids with State and Cov.vi"/>
 		<Item Name="Ball Kalman Filter And Update.vi" Type="VI" URL="../Util/Ball Kalman Filter And Update.vi"/>
@@ -113,6 +121,7 @@
 		<Item Name="Role Decisor Simple.vi" Type="VI" URL="../Role Decisor Simple.vi"/>
 		<Item Name="Role Decisors Selector.vi" Type="VI" URL="../Role Decisors Selector.vi"/>
 		<Item Name="Role Playing Simple.vi" Type="VI" URL="../Role Playing Simple.vi"/>
+		<Item Name="In Range.vi" Type="VI" URL="../Util/In Range.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
@@ -165,7 +174,7 @@
 			<Item Name="SSL Detection Frame Simple Estimator.vi" Type="VI" URL="/C/Users/cadre/AppData/Local/Temp/SSL Detection Frame Simple Estimator.vi"/>
 			<Item Name="SSL Log Reader.vi" Type="VI" URL="/C/Users/cadre/AppData/Local/Temp/SSL/SSL Log Reader.vi"/>
 			<Item Name="Lossy Stream-t&apos;SSL Referee Game Status.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;SSL Referee Game Status.ctl&apos;.lvlib"/>
-			<Item Name="Lossy Stream-c(c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)),t&apos;SSL Referee Game Status.ctl&apos;).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)),t&apos;SSL Referee Game Status.ctl&apos;).lvlib"/>
+			<Item Name="Lossy Stream-t&apos;AI Input.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;AI Input.ctl&apos;.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
