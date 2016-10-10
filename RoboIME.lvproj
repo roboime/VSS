@@ -22,6 +22,7 @@
 			<Item Name="SSL Referee Game Status.ctl" Type="VI" URL="../SSL Referee Game Status.ctl"/>
 			<Item Name="SSL Referee.ctl" Type="VI" URL="../SSL Referee.ctl"/>
 			<Item Name="SSL Referee Team Info.ctl" Type="VI" URL="../SSL Referee Team Info.ctl"/>
+			<Item Name="SSL Field State.ctl" Type="VI" URL="../SSL/SSL Field State.ctl"/>
 		</Item>
 		<Item Name="SubVI" Type="Folder">
 			<Item Name="GUI" Type="Folder">
@@ -110,23 +111,23 @@
 			<Item Name="Carla&apos;s Codes" Type="Folder" URL="../Carla&apos;s Codes">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
+			<Item Name="SSL Vision Package Selector.vi" Type="VI" URL="../SSL/SSL Vision Package Selector.vi"/>
+			<Item Name="Get Ball Pose.vi" Type="VI" URL="../Util/Get Ball Pose.vi"/>
+			<Item Name="Get Robot Pose.vi" Type="VI" URL="../Util/Get Robot Pose.vi"/>
+			<Item Name="Get Pose.vi" Type="VI" URL="../Util/Get Pose.vi"/>
+			<Item Name="SSL Detection Frame Balls Kalman Estimator.vi" Type="VI" URL="../SSL/SSL Detection Frame Balls Kalman Estimator.vi"/>
+			<Item Name="Update Ball Pose.vi" Type="VI" URL="../Util/Update Ball Pose.vi"/>
+			<Item Name="SSL Detection Balls Delete Invalids with State and Cov.vi" Type="VI" URL="../Util/SSL Detection Balls Delete Invalids with State and Cov.vi"/>
+			<Item Name="Ball Kalman Filter And Update.vi" Type="VI" URL="../Util/Ball Kalman Filter And Update.vi"/>
+			<Item Name="SSL Detection Frame Simple Estimator Cameras.vi" Type="VI" URL="../Util/SSL Detection Frame Simple Estimator Cameras.vi"/>
+			<Item Name="SSL Detection Frame Simple Estimator Cameras Number.vi" Type="VI" URL="../Util/SSL Detection Frame Simple Estimator Cameras Number.vi"/>
+			<Item Name="SSL Detection Frame Simple Estimator Kalman.vi" Type="VI" URL="../Util/SSL Detection Frame Simple Estimator Kalman.vi"/>
+			<Item Name="Role Decisor Simple.vi" Type="VI" URL="../Role Decisor Simple.vi"/>
+			<Item Name="Role Decisors Selector.vi" Type="VI" URL="../Role Decisors Selector.vi"/>
+			<Item Name="Role Playing Simple.vi" Type="VI" URL="../Role Playing Simple.vi"/>
 		</Item>
 		<Item Name="SSL Vision Log Player.vi" Type="VI" URL="../SSL Vision Log Player.vi"/>
-		<Item Name="SSL Vision Package Selector.vi" Type="VI" URL="../SSL/SSL Vision Package Selector.vi"/>
-		<Item Name="Get Ball Pose.vi" Type="VI" URL="../Util/Get Ball Pose.vi"/>
-		<Item Name="Get Robot Pose.vi" Type="VI" URL="../Util/Get Robot Pose.vi"/>
-		<Item Name="Get Pose.vi" Type="VI" URL="../Util/Get Pose.vi"/>
-		<Item Name="SSL Detection Frame Balls Kalman Estimator.vi" Type="VI" URL="../SSL/SSL Detection Frame Balls Kalman Estimator.vi"/>
-		<Item Name="SSL Vision Log Player_Before_48ba08720c56c0a8b7144770c98b40c29f58bcd1.vi" Type="VI" URL="../../../../cadre/AppData/Local/Temp/SSL Vision Log Player_Before_48ba08720c56c0a8b7144770c98b40c29f58bcd1.vi"/>
-		<Item Name="Update Ball Pose.vi" Type="VI" URL="../Util/Update Ball Pose.vi"/>
-		<Item Name="SSL Detection Balls Delete Invalids with State and Cov.vi" Type="VI" URL="../Util/SSL Detection Balls Delete Invalids with State and Cov.vi"/>
-		<Item Name="Ball Kalman Filter And Update.vi" Type="VI" URL="../Util/Ball Kalman Filter And Update.vi"/>
-		<Item Name="SSL Detection Frame Simple Estimator Cameras.vi" Type="VI" URL="../Util/SSL Detection Frame Simple Estimator Cameras.vi"/>
-		<Item Name="SSL Detection Frame Simple Estimator Cameras Number.vi" Type="VI" URL="../Util/SSL Detection Frame Simple Estimator Cameras Number.vi"/>
-		<Item Name="SSL Detection Frame Simple Estimator Kalman.vi" Type="VI" URL="../Util/SSL Detection Frame Simple Estimator Kalman.vi"/>
-		<Item Name="Role Decisor Simple.vi" Type="VI" URL="../Role Decisor Simple.vi"/>
-		<Item Name="Role Decisors Selector.vi" Type="VI" URL="../Role Decisors Selector.vi"/>
-		<Item Name="Role Playing Simple.vi" Type="VI" URL="../Role Playing Simple.vi"/>
+		<Item Name="Lossy Stream-t&apos;AI Input.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;AI Input.ctl&apos;.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
@@ -152,6 +153,10 @@
 				<Item Name="lvpidtkt.dll" Type="Document" URL="/&lt;vilib&gt;/addons/control/pid/lvpidtkt.dll"/>
 				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
 				<Item Name="NI_AAL_Angle.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AAL_Angle.lvlib"/>
+				<Item Name="Draw Text at Point.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text at Point.vi"/>
+				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
+				<Item Name="Draw Text in Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text in Rect.vi"/>
+				<Item Name="PCT Pad String.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/PCT Pad String.vi"/>
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
@@ -172,10 +177,10 @@
 			<Item Name="estimate covariance.vi" Type="VI" URL="../estimate covariance.vi"/>
 			<Item Name="calculo de f_k.vi" Type="VI" URL="../calculo de f_k.vi"/>
 			<Item Name="Lossy Stream-t&apos;SSL Referee Game Status.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;SSL Referee Game Status.ctl&apos;.lvlib"/>
-			<Item Name="Lossy Stream-t&apos;AI Input.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;AI Input.ctl&apos;.lvlib"/>
 			<Item Name="2DVectorNormalizer.vi" Type="VI" URL="../Util/2DVectorNormalizer.vi"/>
 			<Item Name="lvanlys.framework" Type="Document" URL="/&lt;resource&gt;/lvanlys.framework"/>
 			<Item Name="In Range.vi" Type="VI" URL="../Util/In Range.vi"/>
+			<Item Name="Lossy Stream-t&apos;SSL Field State.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;SSL Field State.ctl&apos;.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
