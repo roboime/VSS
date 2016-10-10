@@ -35,6 +35,9 @@
 				<Item Name="SSL Referee Stage to GUI Stage.vi" Type="VI" URL="../SSL Referee Stage to GUI Stage.vi"/>
 				<Item Name="SSL Referee to GUI Referee.vi" Type="VI" URL="../SSL Referee to GUI Referee.vi"/>
 				<Item Name="SSL Referee Command to GUI Command.vi" Type="VI" URL="../SSL Referee Command to GUI Command.vi"/>
+				<Item Name="IA Robot Display.ctl" Type="VI" URL="../GUI/IA Robot Display.ctl"/>
+				<Item Name="IA Robot Line Display.ctl" Type="VI" URL="../GUI/IA Robot Line Display.ctl"/>
+				<Item Name="IA To GUI Robot.vi" Type="VI" URL="../GUI/IA To GUI Robot.vi"/>
 			</Item>
 			<Item Name="SSL" Type="Folder">
 				<Item Name="SSL Detection Frame.vi" Type="VI" URL="../SSL Detection Frame.vi"/>
