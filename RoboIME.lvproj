@@ -190,6 +190,12 @@
 			<Item Name="lvanlys.framework" Type="Document" URL="/&lt;resource&gt;/lvanlys.framework"/>
 			<Item Name="In Range.vi" Type="VI" URL="../Util/In Range.vi"/>
 			<Item Name="Lossy Stream-t&apos;SSL Field State.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;SSL Field State.ctl&apos;.lvlib"/>
+			<Item Name="Modulo.vi" Type="VI" URL="../../../Documents/Nicolas/Modulo.vi"/>
+			<Item Name="GoTo Tangent.vi" Type="VI" URL="../../../Documents/Nicolas/GoTo Tangent.vi"/>
+			<Item Name="distance.vi" Type="VI" URL="../Util/distance.vi"/>
+			<Item Name="potential-field.vi" Type="VI" URL="../Potential Field/potential-field.vi"/>
+			<Item Name="repulsive-force.vi" Type="VI" URL="../Potential Field/repulsive-force.vi"/>
+			<Item Name="Select None or Robot.ctl" Type="VI" URL="../Util/Select None or Robot.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
