@@ -136,6 +136,7 @@
 		<Item Name="Update Timestamp.vi" Type="VI" URL="../Util/Update Timestamp.vi"/>
 		<Item Name="Sort Robots.vi" Type="VI" URL="../Util/Sort Robots.vi"/>
 		<Item Name="Update Sample History.vi" Type="VI" URL="../Util/Update Sample History.vi"/>
+		<Item Name="Select Robots By Confidence.vi" Type="VI" URL="../Util/Select Robots By Confidence.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
