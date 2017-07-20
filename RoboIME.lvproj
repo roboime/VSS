@@ -135,6 +135,7 @@
 		<Item Name="FPS Counter.vi" Type="VI" URL="../Util/FPS Counter.vi"/>
 		<Item Name="Update Timestamp.vi" Type="VI" URL="../Util/Update Timestamp.vi"/>
 		<Item Name="Sort Robots.vi" Type="VI" URL="../Util/Sort Robots.vi"/>
+		<Item Name="Ball out of field.vi" Type="VI" URL="../../../Downloads/Ball out of field.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
@@ -166,6 +167,7 @@
 				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
 				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
 				<Item Name="Draw Multiple Lines.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Multiple Lines.vi"/>
+				<Item Name="NI_PtbyPt.lvlib" Type="Library" URL="/&lt;vilib&gt;/ptbypt/NI_PtbyPt.lvlib"/>
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
@@ -176,7 +178,6 @@
 			<Item Name="ChannelProbePositionAndTitle.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbePositionAndTitle.vi"/>
 			<Item Name="ChannelProbeWindowStagger.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/ChannelProbeWindowStagger.vi"/>
 			<Item Name="Stream.lvlib" Type="Library" URL="/&lt;resource&gt;/Channels/Stream/Stream.lvlib"/>
-			<Item Name="Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32)).lvlib"/>
 			<Item Name="Lossy Stream-a[.](u8).lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-a[.](u8).lvlib"/>
 			<Item Name="measurement residual.vi" Type="VI" URL="../measurement residual.vi"/>
 			<Item Name="posterior estimate covariance.vi" Type="VI" URL="../posterior estimate covariance.vi"/>
@@ -190,6 +191,26 @@
 			<Item Name="lvanlys.framework" Type="Document" URL="/&lt;resource&gt;/lvanlys.framework"/>
 			<Item Name="In Range.vi" Type="VI" URL="../Util/In Range.vi"/>
 			<Item Name="Lossy Stream-t&apos;SSL Field State.ctl&apos;.lvlib" Type="Library" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-t&apos;SSL Field State.ctl&apos;.lvlib"/>
+			<Item Name="Check Reference.vi" Type="VI" URL="../Util/Check Reference.vi"/>
+			<Item Name="Modulo.vi" Type="VI" URL="../Util/Modulo.vi"/>
+			<Item Name="distance.vi" Type="VI" URL="../Util/distance.vi"/>
+			<Item Name="Select None or Robot.ctl" Type="VI" URL="../Util/Select None or Robot.ctl"/>
+			<Item Name="DynamicPersonality.vi" Type="VI" URL="../DynamicPersonality.vi"/>
+			<Item Name="GoToTest.vi" Type="VI" URL="../GoToTest.vi"/>
+			<Item Name="SSL Detection Frame Robots Kalman Estimator.vi" Type="VI" URL="../SSL/SSL Detection Frame Robots Kalman Estimator.vi"/>
+			<Item Name="Robot Kalman Filter And Update.vi" Type="VI" URL="../Util/Robot Kalman Filter And Update.vi"/>
+			<Item Name="Update Robot Pose.vi" Type="VI" URL="../Util/Update Robot Pose.vi"/>
+			<Item Name="SSL Detection Robots Delete Invalids Kalman.vi" Type="VI" URL="../SSL Detection Robots Delete Invalids Kalman.vi"/>
+			<Item Name="potential-field.vi" Type="VI" URL="../Potential Field/potential-field.vi"/>
+			<Item Name="repulsive-force.vi" Type="VI" URL="../Potential Field/repulsive-force.vi"/>
+			<Item Name="SSL Data Receiver.vi" Type="VI" URL="../Util/SSL Data Receiver.vi"/>
+			<Item Name="TouchEvent.vi" Type="VI" URL="../Util/TouchEvent.vi"/>
+			<Item Name="HasBallMoved.vi" Type="VI" URL="../Util/HasBallMoved.vi"/>
+			<Item Name=")Channel.ctl" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/)Channel.ctl"/>
+			<Item Name="Read.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/Read.vi"/>
+			<Item Name="Read With Abort.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/Read With Abort.vi"/>
+			<Item Name="Endpoint.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/Endpoint.vi"/>
+			<Item Name=")Channel.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/)Channel.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
