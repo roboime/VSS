@@ -135,7 +135,12 @@
 		<Item Name="FPS Counter.vi" Type="VI" URL="../Util/FPS Counter.vi"/>
 		<Item Name="Update Timestamp.vi" Type="VI" URL="../Util/Update Timestamp.vi"/>
 		<Item Name="Sort Robots.vi" Type="VI" URL="../Util/Sort Robots.vi"/>
+<<<<<<< HEAD
 		<Item Name="Ball out of field.vi" Type="VI" URL="../../../Downloads/Ball out of field.vi"/>
+=======
+		<Item Name="Update Sample History.vi" Type="VI" URL="../Util/Update Sample History.vi"/>
+		<Item Name="Select Robots By Confidence.vi" Type="VI" URL="../Util/Select Robots By Confidence.vi"/>
+>>>>>>> 593647bb8dc98ad6deefed59a9bef1b43c25e024
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
@@ -168,6 +173,10 @@
 				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
 				<Item Name="Draw Multiple Lines.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Multiple Lines.vi"/>
 				<Item Name="NI_PtbyPt.lvlib" Type="Library" URL="/&lt;vilib&gt;/ptbypt/NI_PtbyPt.lvlib"/>
+<<<<<<< HEAD
+=======
+				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
+>>>>>>> 593647bb8dc98ad6deefed59a9bef1b43c25e024
 			</Item>
 			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
@@ -197,6 +206,7 @@
 			<Item Name="Select None or Robot.ctl" Type="VI" URL="../Util/Select None or Robot.ctl"/>
 			<Item Name="DynamicPersonality.vi" Type="VI" URL="../DynamicPersonality.vi"/>
 			<Item Name="GoToTest.vi" Type="VI" URL="../GoToTest.vi"/>
+<<<<<<< HEAD
 			<Item Name="SSL Detection Frame Robots Kalman Estimator.vi" Type="VI" URL="../SSL/SSL Detection Frame Robots Kalman Estimator.vi"/>
 			<Item Name="Robot Kalman Filter And Update.vi" Type="VI" URL="../Util/Robot Kalman Filter And Update.vi"/>
 			<Item Name="Update Robot Pose.vi" Type="VI" URL="../Util/Update Robot Pose.vi"/>
@@ -211,6 +221,29 @@
 			<Item Name="Read With Abort.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/Read With Abort.vi"/>
 			<Item Name="Endpoint.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/Endpoint.vi"/>
 			<Item Name=")Channel.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/)Channel.vi"/>
+=======
+			<Item Name=")Channel.ctl" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/)Channel.ctl"/>
+			<Item Name="Read.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/Read.vi"/>
+			<Item Name="Read With Abort.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/Read With Abort.vi"/>
+			<Item Name="Endpoint.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/Endpoint.vi"/>
+			<Item Name=")Channel.vi" Type="VI" URL="/&lt;extravilib&gt;/ChannelInstances/Lossy Stream-c(t&apos;SSL Detection Frame.ctl&apos;,c(u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32,u32))/)Channel.vi"/>
+			<Item Name="Kalman H.vi" Type="VI" URL="../Util/Kalman H.vi"/>
+			<Item Name="Kalman F.vi" Type="VI" URL="../Util/Kalman F.vi"/>
+			<Item Name="Update Frame Array.vi" Type="VI" URL="../Util/Update Frame Array.vi"/>
+			<Item Name="Search Or Add Frame.vi" Type="VI" URL="../Util/Search Or Add Frame.vi"/>
+			<Item Name="Update Frame Element.vi" Type="VI" URL="../Util/Update Frame Element.vi"/>
+			<Item Name="Replace Or Add Robots.vi" Type="VI" URL="../Util/Replace Or Add Robots.vi"/>
+			<Item Name="Sort Frame Array.vi" Type="VI" URL="../Util/Sort Frame Array.vi"/>
+			<Item Name="SSL Detection Frame Robots Kalman Estimator.vi" Type="VI" URL="../SSL/SSL Detection Frame Robots Kalman Estimator.vi"/>
+			<Item Name="Check and Create Kalman Data.vi" Type="VI" URL="../Util/Check and Create Kalman Data.vi"/>
+			<Item Name="Robot Kalman Filter And Update.vi" Type="VI" URL="../Util/Robot Kalman Filter And Update.vi"/>
+			<Item Name="Update Robot Pose.vi" Type="VI" URL="../Util/Update Robot Pose.vi"/>
+			<Item Name="SSL Detection Robots Delete Invalids Kalman.vi" Type="VI" URL="../SSL Detection Robots Delete Invalids Kalman.vi"/>
+			<Item Name="Before After View.vi" Type="VI" URL="../Util/Before After View.vi"/>
+			<Item Name="potential-field.vi" Type="VI" URL="../Potential Field/potential-field.vi"/>
+			<Item Name="repulsive-force.vi" Type="VI" URL="../Potential Field/repulsive-force.vi"/>
+			<Item Name="SSL Data Receiver.vi" Type="VI" URL="../Util/SSL Data Receiver.vi"/>
+>>>>>>> 593647bb8dc98ad6deefed59a9bef1b43c25e024
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
