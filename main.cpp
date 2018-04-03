@@ -1,4 +1,4 @@
-/*
+	/*
  * This file is part of the VSS-SampleStrategy project.
  *
  * This Source Code Form is subject to the terms of the GNU GENERAL PUBLIC LICENSE,
@@ -24,7 +24,12 @@
 #include <stdlib.h>
 #include <iostream>
 #include <stdio.h>
+
 #include <string.h>
+#include <netinet/in.h>
+#include <stdlib.h>
+#include <sys/socket.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -41,29 +46,6 @@ float* receive_state();
 void send_commands();
 void send_debug();
 
-int resolvehelper(const char* hostname, int family, const char* service, sockaddr_storage* pAddr)
-{
-    int result;
-    addrinfo* result_list = NULL;
-    addrinfo hints = {};
-    hints.ai_family = family;
-    hints.ai_socktype = SOCK_DGRAM; // without this flag, getaddrinfo will return 3x the number of addresses (one for each socket type).
-    result = getaddrinfo(hostname, service, &hints, &result_list);
-    if (result == 0)
-    {
-        //ASSERT(result_list->ai_addrlen <= sizeof(sockaddr_in));
-        memcpy(pAddr, result_list->ai_addr, result_list->ai_addrlen);
-        freeaddrinfo(result_list);
-    }
-
-    return result;
-}
-
-void error( char *msg)
-{
-    perror(msg);
-    exit(EXIT_FAILURE);
-}
 
 int main(int argc, char** argv){
     srand(time(NULL));
@@ -71,90 +53,108 @@ int main(int argc, char** argv){
 	interface_send.createSendCommandsTeam1(&global_commands, "tcp://localhost:5556");   //! Team2 abre o socket na porta 5557
 	interface_debug.createSendDebugTeam1(&global_debug, "tcp://localhost:5558");       //! Team2 abre o socket na porta 5559
 
-    // Configuração de envio de dados para o LabView
+	float s0,s1; // ,s2; //s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16;
+	float* s;
 
-    int result = 0;
-    int sock = socket(AF_INET, SOCK_DGRAM, 0);
-    float s1, s2;
-	float* s;	
+	int server_fd, client;
+	struct sockaddr_in address, addc;
+	int opt = 1;
+	int addrlen = sizeof(address);
+	char buffer[544];
 
-    sockaddr_in addrListen = {};
+	if ((server_fd = socket(AF_INET, SOCK_DGRAM, 0)) == 0){
+		perror("socket failed");
+		exit(EXIT_FAILURE);
+	}
 
-    result = 0;
-    sock = socket(AF_INET, SOCK_DGRAM, 0);
-    addrListen = {};
+	if ((client = socket(AF_INET, SOCK_DGRAM, 0)) == 0){
+		perror("socket failed");
+		exit(EXIT_FAILURE);
+	}
 
-    addrListen.sin_family = AF_INET;
-    result = bind(sock, (sockaddr*)&addrListen, sizeof(addrListen));
-    if (result == -1)
-    {
-        int lasterror = errno;
-        std::cout << "error: " << lasterror;
-        // exit(1);
-    }
+	if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))){
+		perror("setsockopt");
+		exit(EXIT_FAILURE);
+	}
 
-    sockaddr_storage addrDest = {};
-    result = resolvehelper("192.168.0.103", AF_INET, "9000", &addrDest);
-    if (result != 0)
-    {
-        int lasterror = errno;
-        std::cout << "error: " << lasterror;
-        // exit(1);
-    }
 
-    // Fim de configuração de envio de dados para o LabView
+	if (setsockopt(client, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))){
+		perror("setsockopt");
+		exit(EXIT_FAILURE);
+	}
 
-    // Configuração de recebimento de dados do LabView
+	address.sin_family = AF_INET;
+	address.sin_addr.s_addr = INADDR_ANY;
+	address.sin_port = htons(9000);
 
-    int sockfd;
-    sockfd = socket(AF_INET,SOCK_DGRAM,0);
-    struct sockaddr_in serv,client;
- 
-    serv.sin_family = AF_INET;
-    serv.sin_port = htons(9000);
-    serv.sin_addr.s_addr = inet_addr("192.168.0.103");
 
-    char buffer[256];
-    socklen_t l = sizeof(client);
- 
-    // Fim de configuração de recebimento de dados do LabView
+	addc.sin_family = AF_INET;
+	addc.sin_addr.s_addr = inet_addr("192.168.0.101");
+	addc.sin_port = htons(8000);
 
-    while(true){
+	if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0){
+		perror("bind failed");
+		exit(EXIT_FAILURE);
+	}
+
+ 	while(true){
+
+		recvfrom(server_fd, buffer, sizeof(buffer), 0, (sockaddr *)&address, (socklen_t *)&addrlen);
+		fflush(stdout);
+
         s = receive_state();
         send_commands();
         //send_debug();
 
-
-        // Envio de dados
-
-        s1 = s[0];
-        s2 = s[1];
-
+        s0 = s[0];
+        s1 = s[1];
+        // s2 = s[2];
+        
+        /*s3 = s[3];
+        s4 = s[4];
+        s5 = s[5];
+        s6 = s[6];
+        s7 = s[7];
+        s8 = s[8];
+        s9 = s[9];
+        s10 = s[10];
+        s11 = s[11];
+        s12 = s[12];
+        s13 = s[13];
+        s14 = s[14];
+        s15 = s[15];
+        s16 = s[16];
+*/
+        string resultado0 = to_string(s0);
         string resultado1 = to_string(s1);
-        string resultado2 = to_string(s2);
-		string resultado = resultado1+resultado2;
+		// string resultado2 = to_string(s2);
+        /*string resultado3 = to_string(s3);
+        string resultado4 = to_string(s4);
+        string resultado5 = to_string(s5);
+        string resultado6 = to_string(s6);
+        string resultado7 = to_string(s7);
+        string resultado8 = to_string(s8);
+        string resultado9 = to_string(s9);
+        string resultado10 = to_string(s10);
+        string resultado11 = to_string(s11);
+        string resultado12 = to_string(s12);
+        string resultado13 = to_string(s13);
+        string resultado14 = to_string(s14);
+        string resultado15 = to_string(s15);
+        string resultado16 = to_string(s16);
+*/
+
+		string resultado = resultado0+" "+resultado1; //+" "+resultado2; //+" "+resultado3+" "+resultado4+" "+resultado5+" "+resultado6+" "+resultado7+" "+resultado8+" "+resultado9+" "+resultado10+" "+resultado11+" "+resultado12+" "+resultado13+" "+resultado14+" "+resultado15+" "+resultado16;
         const char* msg = resultado.c_str();
         size_t msg_length = strlen(msg);
 
-        result = sendto(sock, msg, msg_length, 0, (sockaddr*)&addrDest, sizeof(addrDest));
+        sendto(client, msg, msg_length, 0, (sockaddr *)&addc, sizeof(addc));
 
-        // Fim de envio de dados
-
-        // Recebimento de dados
-
-        int rc= recvfrom(sockfd,buffer,sizeof(buffer),0,(struct sockaddr *)&client,&l);
-        if(rc<0)
-        {
-            cout<<"ERROR READING FROM SOCKET";
-        }
-        cout<<"\n the message received is : "<<buffer<<endl;
-
-        // Fim do recebimento de dados
-        
-    }
+	}       	
 
 	return 0;
 }
+
 
 float* receive_state(){
     interface_receive.receiveState();           //! Bloqueante até o VSS-Vision ou VSS-Simulator enviar um estado
@@ -162,7 +162,7 @@ float* receive_state(){
 	float* result;
 	float current[2];
 
-    global_state.balls(0).pose().x();           // Pos X da bola
+	global_state.balls(0).pose().x();           // Pos X da bola
     global_state.balls(0).pose().y();           // Pos Y da bola
 
     global_state.balls(0).v_pose().x();         // Vel X da bola
@@ -177,6 +177,10 @@ float* receive_state(){
         global_state.robots_yellow(i).v_pose().y();         // Vel Y do robô amarelo i
         global_state.robots_yellow(i).v_pose().yaw();       // Vel Z do robô amarelo i
 
+     }
+
+     for(int i = 0; i < 3; i++){
+
         global_state.robots_blue(i).pose().x();             // Pos X do robô azul i
         global_state.robots_blue(i).pose().y();             // Pos Y do robô azul i
         global_state.robots_blue(i).pose().yaw();           // Rot Z do robô azul i
@@ -184,10 +188,29 @@ float* receive_state(){
         global_state.robots_blue(i).v_pose().x();           // Vel X do robô azul i
         global_state.robots_blue(i).v_pose().y();           // Vel Y do robô azul i
         global_state.robots_blue(i).v_pose().yaw();         // Vel Z do robô azul i
+    
     }
 
-	current[0] = global_state.robots_yellow(1).pose().x();
-	current[1] = global_state.robots_yellow(1).pose().y();
+
+    current[0] = global_state.balls(0).pose().x();           // Pos X da bola
+    //current[1] = global_state.balls(0).pose().y();           // Pos Y da bola
+	current[1] = global_state.robots_yellow(0).pose().x();           // Pos X do robô amarelo i
+    //current[3] = global_state.robots_yellow(0).pose().y();           // Pos Y do robô amarelo i
+    //current[4] = global_state.robots_yellow(0).pose().yaw();         // Rot Z do robô amarelo i
+    //current[5] = global_state.robots_yellow(1).pose().x();           // Pos X do robô amarelo i
+    //current[6] = global_state.robots_yellow(1).pose().y();           // Pos Y do robô amarelo i
+    //current[7] = global_state.robots_yellow(1).pose().yaw();         // Rot Z do robô amarelo i
+    //current[8] = global_state.robots_yellow(2).pose().x();           // Pos X do robô amarelo i
+    //current[9] = global_state.robots_yellow(2).pose().y();           // Pos Y do robô amarelo i
+    //current[10] = global_state.robots_yellow(2).pose().yaw();         // Rot Z do robô amarelo i
+
+    //current[11] = global_state.robots_blue(0).pose().x();             // Pos X do robô azul i
+    //current[12] = global_state.robots_blue(0).pose().y();             // Pos Y do robô azul i
+    //current[13] = global_state.robots_blue(1).pose().x();             // Pos X do robô azul i
+    //current[14] = global_state.robots_blue(1).pose().y();             // Pos Y do robô azul i
+    //current[15] = global_state.robots_blue(2).pose().x();             // Pos X do robô azul i
+    //current[16] = global_state.robots_blue(2).pose().y();             // Pos Y do robô azul i
+
 	result = current; 
     return result;
 }
