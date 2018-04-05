@@ -1,0 +1,10 @@
+package Labview;
+
+message DataVel {
+	required int32 friend1VelX = 1;
+	required int32 friend1VelY = 2;
+	required int32 friend2VelX = 3;
+	required int32 friend2VelY = 4;
+	required int32 friend3VelX = 5;
+	required int32 friend3VelY = 6;
+}
