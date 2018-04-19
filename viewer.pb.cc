@@ -26,6 +26,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* DataEnemy_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   DataEnemy_reflection_ = NULL;
+const ::google::protobuf::Descriptor* DataReceiver_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  DataReceiver_reflection_ = NULL;
 
 }  // namespace
 
@@ -81,6 +84,26 @@ void protobuf_AssignDesc_viewer_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DataEnemy));
+  DataReceiver_descriptor_ = file->message_type(2);
+  static const int DataReceiver_offsets_[6] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataReceiver, friend0veldir_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataReceiver, friend1veldir_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataReceiver, friend2veldir_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataReceiver, friend0velesq_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataReceiver, friend1velesq_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataReceiver, friend2velesq_),
+  };
+  DataReceiver_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      DataReceiver_descriptor_,
+      DataReceiver::default_instance_,
+      DataReceiver_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataReceiver, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataReceiver, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(DataReceiver));
 }
 
 namespace {
@@ -97,6 +120,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
     DataFriend_descriptor_, &DataFriend::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     DataEnemy_descriptor_, &DataEnemy::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    DataReceiver_descriptor_, &DataReceiver::default_instance());
 }
 
 }  // namespace
@@ -106,6 +131,8 @@ void protobuf_ShutdownFile_viewer_2eproto() {
   delete DataFriend_reflection_;
   delete DataEnemy::default_instance_;
   delete DataEnemy_reflection_;
+  delete DataReceiver::default_instance_;
+  delete DataReceiver_reflection_;
 }
 
 void protobuf_AddDesc_viewer_2eproto() {
@@ -125,13 +152,19 @@ void protobuf_AddDesc_viewer_2eproto() {
     "y\022\023\n\013enemy1PoseX\030\001 \002(\002\022\023\n\013enemy1PoseY\030\002 "
     "\002(\002\022\023\n\013enemy2PoseX\030\003 \002(\002\022\023\n\013enemy2PoseY\030"
     "\004 \002(\002\022\023\n\013enemy3PoseX\030\005 \002(\002\022\023\n\013enemy3Pose"
-    "Y\030\006 \002(\002", 407);
+    "Y\030\006 \002(\002\"\230\001\n\014DataReceiver\022\025\n\rfriend0VelDi"
+    "r\030\001 \002(\r\022\025\n\rfriend1VelDir\030\002 \002(\r\022\025\n\rfriend"
+    "2VelDir\030\003 \002(\r\022\025\n\rfriend0VelEsq\030\004 \002(\r\022\025\n\r"
+    "friend1VelEsq\030\005 \002(\r\022\025\n\rfriend2VelEsq\030\006 \002"
+    "(\r", 562);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "viewer.proto", &protobuf_RegisterTypes);
   DataFriend::default_instance_ = new DataFriend();
   DataEnemy::default_instance_ = new DataEnemy();
+  DataReceiver::default_instance_ = new DataReceiver();
   DataFriend::default_instance_->InitAsDefaultInstance();
   DataEnemy::default_instance_->InitAsDefaultInstance();
+  DataReceiver::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_viewer_2eproto);
 }
 
@@ -1157,6 +1190,435 @@ void DataEnemy::Swap(DataEnemy* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = DataEnemy_descriptor_;
   metadata.reflection = DataEnemy_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int DataReceiver::kFriend0VelDirFieldNumber;
+const int DataReceiver::kFriend1VelDirFieldNumber;
+const int DataReceiver::kFriend2VelDirFieldNumber;
+const int DataReceiver::kFriend0VelEsqFieldNumber;
+const int DataReceiver::kFriend1VelEsqFieldNumber;
+const int DataReceiver::kFriend2VelEsqFieldNumber;
+#endif  // !_MSC_VER
+
+DataReceiver::DataReceiver()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:Viewer.DataReceiver)
+}
+
+void DataReceiver::InitAsDefaultInstance() {
+}
+
+DataReceiver::DataReceiver(const DataReceiver& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:Viewer.DataReceiver)
+}
+
+void DataReceiver::SharedCtor() {
+  _cached_size_ = 0;
+  friend0veldir_ = 0u;
+  friend1veldir_ = 0u;
+  friend2veldir_ = 0u;
+  friend0velesq_ = 0u;
+  friend1velesq_ = 0u;
+  friend2velesq_ = 0u;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+DataReceiver::~DataReceiver() {
+  // @@protoc_insertion_point(destructor:Viewer.DataReceiver)
+  SharedDtor();
+}
+
+void DataReceiver::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void DataReceiver::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* DataReceiver::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return DataReceiver_descriptor_;
+}
+
+const DataReceiver& DataReceiver::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_viewer_2eproto();
+  return *default_instance_;
+}
+
+DataReceiver* DataReceiver::default_instance_ = NULL;
+
+DataReceiver* DataReceiver::New() const {
+  return new DataReceiver;
+}
+
+void DataReceiver::Clear() {
+#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
+  &reinterpret_cast<DataReceiver*>(16)->f) - \
+   reinterpret_cast<char*>(16))
+
+#define ZR_(first, last) do {                              \
+    size_t f = OFFSET_OF_FIELD_(first);                    \
+    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
+    ::memset(&first, 0, n);                                \
+  } while (0)
+
+  if (_has_bits_[0 / 32] & 63) {
+    ZR_(friend0veldir_, friend2velesq_);
+  }
+
+#undef OFFSET_OF_FIELD_
+#undef ZR_
+
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool DataReceiver::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:Viewer.DataReceiver)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required uint32 friend0VelDir = 1;
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &friend0veldir_)));
+          set_has_friend0veldir();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(16)) goto parse_friend1VelDir;
+        break;
+      }
+
+      // required uint32 friend1VelDir = 2;
+      case 2: {
+        if (tag == 16) {
+         parse_friend1VelDir:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &friend1veldir_)));
+          set_has_friend1veldir();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(24)) goto parse_friend2VelDir;
+        break;
+      }
+
+      // required uint32 friend2VelDir = 3;
+      case 3: {
+        if (tag == 24) {
+         parse_friend2VelDir:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &friend2veldir_)));
+          set_has_friend2veldir();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(32)) goto parse_friend0VelEsq;
+        break;
+      }
+
+      // required uint32 friend0VelEsq = 4;
+      case 4: {
+        if (tag == 32) {
+         parse_friend0VelEsq:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &friend0velesq_)));
+          set_has_friend0velesq();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(40)) goto parse_friend1VelEsq;
+        break;
+      }
+
+      // required uint32 friend1VelEsq = 5;
+      case 5: {
+        if (tag == 40) {
+         parse_friend1VelEsq:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &friend1velesq_)));
+          set_has_friend1velesq();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(48)) goto parse_friend2VelEsq;
+        break;
+      }
+
+      // required uint32 friend2VelEsq = 6;
+      case 6: {
+        if (tag == 48) {
+         parse_friend2VelEsq:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &friend2velesq_)));
+          set_has_friend2velesq();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:Viewer.DataReceiver)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:Viewer.DataReceiver)
+  return false;
+#undef DO_
+}
+
+void DataReceiver::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:Viewer.DataReceiver)
+  // required uint32 friend0VelDir = 1;
+  if (has_friend0veldir()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->friend0veldir(), output);
+  }
+
+  // required uint32 friend1VelDir = 2;
+  if (has_friend1veldir()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->friend1veldir(), output);
+  }
+
+  // required uint32 friend2VelDir = 3;
+  if (has_friend2veldir()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->friend2veldir(), output);
+  }
+
+  // required uint32 friend0VelEsq = 4;
+  if (has_friend0velesq()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->friend0velesq(), output);
+  }
+
+  // required uint32 friend1VelEsq = 5;
+  if (has_friend1velesq()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->friend1velesq(), output);
+  }
+
+  // required uint32 friend2VelEsq = 6;
+  if (has_friend2velesq()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(6, this->friend2velesq(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:Viewer.DataReceiver)
+}
+
+::google::protobuf::uint8* DataReceiver::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Viewer.DataReceiver)
+  // required uint32 friend0VelDir = 1;
+  if (has_friend0veldir()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->friend0veldir(), target);
+  }
+
+  // required uint32 friend1VelDir = 2;
+  if (has_friend1veldir()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->friend1veldir(), target);
+  }
+
+  // required uint32 friend2VelDir = 3;
+  if (has_friend2veldir()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->friend2veldir(), target);
+  }
+
+  // required uint32 friend0VelEsq = 4;
+  if (has_friend0velesq()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->friend0velesq(), target);
+  }
+
+  // required uint32 friend1VelEsq = 5;
+  if (has_friend1velesq()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->friend1velesq(), target);
+  }
+
+  // required uint32 friend2VelEsq = 6;
+  if (has_friend2velesq()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(6, this->friend2velesq(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Viewer.DataReceiver)
+  return target;
+}
+
+int DataReceiver::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required uint32 friend0VelDir = 1;
+    if (has_friend0veldir()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->friend0veldir());
+    }
+
+    // required uint32 friend1VelDir = 2;
+    if (has_friend1veldir()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->friend1veldir());
+    }
+
+    // required uint32 friend2VelDir = 3;
+    if (has_friend2veldir()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->friend2veldir());
+    }
+
+    // required uint32 friend0VelEsq = 4;
+    if (has_friend0velesq()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->friend0velesq());
+    }
+
+    // required uint32 friend1VelEsq = 5;
+    if (has_friend1velesq()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->friend1velesq());
+    }
+
+    // required uint32 friend2VelEsq = 6;
+    if (has_friend2velesq()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->friend2velesq());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void DataReceiver::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const DataReceiver* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const DataReceiver*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void DataReceiver::MergeFrom(const DataReceiver& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_friend0veldir()) {
+      set_friend0veldir(from.friend0veldir());
+    }
+    if (from.has_friend1veldir()) {
+      set_friend1veldir(from.friend1veldir());
+    }
+    if (from.has_friend2veldir()) {
+      set_friend2veldir(from.friend2veldir());
+    }
+    if (from.has_friend0velesq()) {
+      set_friend0velesq(from.friend0velesq());
+    }
+    if (from.has_friend1velesq()) {
+      set_friend1velesq(from.friend1velesq());
+    }
+    if (from.has_friend2velesq()) {
+      set_friend2velesq(from.friend2velesq());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void DataReceiver::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void DataReceiver::CopyFrom(const DataReceiver& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool DataReceiver::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000003f) != 0x0000003f) return false;
+
+  return true;
+}
+
+void DataReceiver::Swap(DataReceiver* other) {
+  if (other != this) {
+    std::swap(friend0veldir_, other->friend0veldir_);
+    std::swap(friend1veldir_, other->friend1veldir_);
+    std::swap(friend2veldir_, other->friend2veldir_);
+    std::swap(friend0velesq_, other->friend0velesq_);
+    std::swap(friend1velesq_, other->friend1velesq_);
+    std::swap(friend2velesq_, other->friend2velesq_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata DataReceiver::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = DataReceiver_descriptor_;
+  metadata.reflection = DataReceiver_reflection_;
   return metadata;
 }
 

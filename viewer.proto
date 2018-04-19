@@ -22,3 +22,12 @@ message DataEnemy{
 	required float enemy3PoseX = 5;
 	required float enemy3PoseY = 6;
 }
+
+message DataReceiver{
+	required uint32 friend0VelDir = 1;
+	required uint32 friend1VelDir = 2;
+	required uint32 friend2VelDir = 3;
+	required uint32 friend0VelEsq = 4;
+	required uint32 friend1VelEsq = 5;
+	required uint32 friend2VelEsq = 6;
+}

@@ -35,6 +35,7 @@ void protobuf_ShutdownFile_viewer_2eproto();
 
 class DataFriend;
 class DataEnemy;
+class DataReceiver;
 
 // ===================================================================
 
@@ -343,6 +344,135 @@ class DataEnemy : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static DataEnemy* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class DataReceiver : public ::google::protobuf::Message {
+ public:
+  DataReceiver();
+  virtual ~DataReceiver();
+
+  DataReceiver(const DataReceiver& from);
+
+  inline DataReceiver& operator=(const DataReceiver& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DataReceiver& default_instance();
+
+  void Swap(DataReceiver* other);
+
+  // implements Message ----------------------------------------------
+
+  DataReceiver* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const DataReceiver& from);
+  void MergeFrom(const DataReceiver& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required uint32 friend0VelDir = 1;
+  inline bool has_friend0veldir() const;
+  inline void clear_friend0veldir();
+  static const int kFriend0VelDirFieldNumber = 1;
+  inline ::google::protobuf::uint32 friend0veldir() const;
+  inline void set_friend0veldir(::google::protobuf::uint32 value);
+
+  // required uint32 friend1VelDir = 2;
+  inline bool has_friend1veldir() const;
+  inline void clear_friend1veldir();
+  static const int kFriend1VelDirFieldNumber = 2;
+  inline ::google::protobuf::uint32 friend1veldir() const;
+  inline void set_friend1veldir(::google::protobuf::uint32 value);
+
+  // required uint32 friend2VelDir = 3;
+  inline bool has_friend2veldir() const;
+  inline void clear_friend2veldir();
+  static const int kFriend2VelDirFieldNumber = 3;
+  inline ::google::protobuf::uint32 friend2veldir() const;
+  inline void set_friend2veldir(::google::protobuf::uint32 value);
+
+  // required uint32 friend0VelEsq = 4;
+  inline bool has_friend0velesq() const;
+  inline void clear_friend0velesq();
+  static const int kFriend0VelEsqFieldNumber = 4;
+  inline ::google::protobuf::uint32 friend0velesq() const;
+  inline void set_friend0velesq(::google::protobuf::uint32 value);
+
+  // required uint32 friend1VelEsq = 5;
+  inline bool has_friend1velesq() const;
+  inline void clear_friend1velesq();
+  static const int kFriend1VelEsqFieldNumber = 5;
+  inline ::google::protobuf::uint32 friend1velesq() const;
+  inline void set_friend1velesq(::google::protobuf::uint32 value);
+
+  // required uint32 friend2VelEsq = 6;
+  inline bool has_friend2velesq() const;
+  inline void clear_friend2velesq();
+  static const int kFriend2VelEsqFieldNumber = 6;
+  inline ::google::protobuf::uint32 friend2velesq() const;
+  inline void set_friend2velesq(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:Viewer.DataReceiver)
+ private:
+  inline void set_has_friend0veldir();
+  inline void clear_has_friend0veldir();
+  inline void set_has_friend1veldir();
+  inline void clear_has_friend1veldir();
+  inline void set_has_friend2veldir();
+  inline void clear_has_friend2veldir();
+  inline void set_has_friend0velesq();
+  inline void clear_has_friend0velesq();
+  inline void set_has_friend1velesq();
+  inline void clear_has_friend1velesq();
+  inline void set_has_friend2velesq();
+  inline void clear_has_friend2velesq();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::uint32 _has_bits_[1];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 friend0veldir_;
+  ::google::protobuf::uint32 friend1veldir_;
+  ::google::protobuf::uint32 friend2veldir_;
+  ::google::protobuf::uint32 friend0velesq_;
+  ::google::protobuf::uint32 friend1velesq_;
+  ::google::protobuf::uint32 friend2velesq_;
+  friend void  protobuf_AddDesc_viewer_2eproto();
+  friend void protobuf_AssignDesc_viewer_2eproto();
+  friend void protobuf_ShutdownFile_viewer_2eproto();
+
+  void InitAsDefaultInstance();
+  static DataReceiver* default_instance_;
 };
 // ===================================================================
 
@@ -761,6 +891,154 @@ inline void DataEnemy::set_enemy3posey(float value) {
   set_has_enemy3posey();
   enemy3posey_ = value;
   // @@protoc_insertion_point(field_set:Viewer.DataEnemy.enemy3PoseY)
+}
+
+// -------------------------------------------------------------------
+
+// DataReceiver
+
+// required uint32 friend0VelDir = 1;
+inline bool DataReceiver::has_friend0veldir() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void DataReceiver::set_has_friend0veldir() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void DataReceiver::clear_has_friend0veldir() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void DataReceiver::clear_friend0veldir() {
+  friend0veldir_ = 0u;
+  clear_has_friend0veldir();
+}
+inline ::google::protobuf::uint32 DataReceiver::friend0veldir() const {
+  // @@protoc_insertion_point(field_get:Viewer.DataReceiver.friend0VelDir)
+  return friend0veldir_;
+}
+inline void DataReceiver::set_friend0veldir(::google::protobuf::uint32 value) {
+  set_has_friend0veldir();
+  friend0veldir_ = value;
+  // @@protoc_insertion_point(field_set:Viewer.DataReceiver.friend0VelDir)
+}
+
+// required uint32 friend1VelDir = 2;
+inline bool DataReceiver::has_friend1veldir() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void DataReceiver::set_has_friend1veldir() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void DataReceiver::clear_has_friend1veldir() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void DataReceiver::clear_friend1veldir() {
+  friend1veldir_ = 0u;
+  clear_has_friend1veldir();
+}
+inline ::google::protobuf::uint32 DataReceiver::friend1veldir() const {
+  // @@protoc_insertion_point(field_get:Viewer.DataReceiver.friend1VelDir)
+  return friend1veldir_;
+}
+inline void DataReceiver::set_friend1veldir(::google::protobuf::uint32 value) {
+  set_has_friend1veldir();
+  friend1veldir_ = value;
+  // @@protoc_insertion_point(field_set:Viewer.DataReceiver.friend1VelDir)
+}
+
+// required uint32 friend2VelDir = 3;
+inline bool DataReceiver::has_friend2veldir() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void DataReceiver::set_has_friend2veldir() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void DataReceiver::clear_has_friend2veldir() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void DataReceiver::clear_friend2veldir() {
+  friend2veldir_ = 0u;
+  clear_has_friend2veldir();
+}
+inline ::google::protobuf::uint32 DataReceiver::friend2veldir() const {
+  // @@protoc_insertion_point(field_get:Viewer.DataReceiver.friend2VelDir)
+  return friend2veldir_;
+}
+inline void DataReceiver::set_friend2veldir(::google::protobuf::uint32 value) {
+  set_has_friend2veldir();
+  friend2veldir_ = value;
+  // @@protoc_insertion_point(field_set:Viewer.DataReceiver.friend2VelDir)
+}
+
+// required uint32 friend0VelEsq = 4;
+inline bool DataReceiver::has_friend0velesq() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void DataReceiver::set_has_friend0velesq() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void DataReceiver::clear_has_friend0velesq() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void DataReceiver::clear_friend0velesq() {
+  friend0velesq_ = 0u;
+  clear_has_friend0velesq();
+}
+inline ::google::protobuf::uint32 DataReceiver::friend0velesq() const {
+  // @@protoc_insertion_point(field_get:Viewer.DataReceiver.friend0VelEsq)
+  return friend0velesq_;
+}
+inline void DataReceiver::set_friend0velesq(::google::protobuf::uint32 value) {
+  set_has_friend0velesq();
+  friend0velesq_ = value;
+  // @@protoc_insertion_point(field_set:Viewer.DataReceiver.friend0VelEsq)
+}
+
+// required uint32 friend1VelEsq = 5;
+inline bool DataReceiver::has_friend1velesq() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void DataReceiver::set_has_friend1velesq() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void DataReceiver::clear_has_friend1velesq() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void DataReceiver::clear_friend1velesq() {
+  friend1velesq_ = 0u;
+  clear_has_friend1velesq();
+}
+inline ::google::protobuf::uint32 DataReceiver::friend1velesq() const {
+  // @@protoc_insertion_point(field_get:Viewer.DataReceiver.friend1VelEsq)
+  return friend1velesq_;
+}
+inline void DataReceiver::set_friend1velesq(::google::protobuf::uint32 value) {
+  set_has_friend1velesq();
+  friend1velesq_ = value;
+  // @@protoc_insertion_point(field_set:Viewer.DataReceiver.friend1VelEsq)
+}
+
+// required uint32 friend2VelEsq = 6;
+inline bool DataReceiver::has_friend2velesq() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void DataReceiver::set_has_friend2velesq() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void DataReceiver::clear_has_friend2velesq() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void DataReceiver::clear_friend2velesq() {
+  friend2velesq_ = 0u;
+  clear_has_friend2velesq();
+}
+inline ::google::protobuf::uint32 DataReceiver::friend2velesq() const {
+  // @@protoc_insertion_point(field_get:Viewer.DataReceiver.friend2VelEsq)
+  return friend2velesq_;
+}
+inline void DataReceiver::set_friend2velesq(::google::protobuf::uint32 value) {
+  set_has_friend2velesq();
+  friend2velesq_ = value;
+  // @@protoc_insertion_point(field_set:Viewer.DataReceiver.friend2VelEsq)
 }
 
 
