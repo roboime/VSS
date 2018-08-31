@@ -43,7 +43,7 @@ int main(int argc, char** argv){
     commandSender->createSocket(TeamType::Yellow);
     debugSender->createSocket(TeamType::Yellow);
 
-    vector <float> s;
+    std::vector <float> s;
 
     // Envio dos pacotes dos amigos e da bola
     struct sockaddr_in addrF;
@@ -67,7 +67,7 @@ int main(int argc, char** argv){
     //char buf[24];
 
     if((fd = socket(AF_INET, SOCK_DGRAM, 0))<0){
-        cout << "cannot create socket" << endl;
+      std::cout << "cannot create socket" << std::endl;
         return 0;
     }
 
@@ -77,7 +77,7 @@ int main(int argc, char** argv){
     myaddr.sin_port = htons(9002);
 
     if (bind(fd, (struct sockaddr *)&myaddr, sizeof(myaddr))<0){
-        cout << "bind failed" << endl;
+      std::cout << "bind failed" << std::endl;
         return 0;
     }
 
@@ -106,13 +106,13 @@ int main(int argc, char** argv){
         viewerFriend.set_ballposey(state.ball.x);
         viewerFriend.set_friend1posex(state.teamYellow[0].x);
         viewerFriend.set_friend1posey(state.teamYellow[0].y);
-        viewerFriend.set_friend1yaw(state.teamYellow[0].yaw);
+        viewerFriend.set_friend1yaw(0);//state.teamYellow[0].yaw);
         viewerFriend.set_friend2posex(state.teamYellow[1].x);
         viewerFriend.set_friend2posey(state.teamYellow[1].y);
-        viewerFriend.set_friend2yaw(state.teamYellow[1].yaw);
+        viewerFriend.set_friend2yaw(0);//state.teamYellow[1].yaw);
         viewerFriend.set_friend3posex(state.teamYellow[2].x);
         viewerFriend.set_friend3posey(state.teamYellow[2].y);
-        viewerFriend.set_friend3yaw(state.teamYellow[2].yaw);
+        viewerFriend.set_friend3yaw(0);//state.teamYellow[2].yaw);
 
         // how to get team blue??
         viewerEnemy.set_enemy1posex(s[11]);
