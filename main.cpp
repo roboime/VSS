@@ -3,6 +3,10 @@
 #include <Communications/DebugSender.h>
 #include "cstdlib"
 #include "roboime.pb.h"
+#include <iostream>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
 
 using namespace vss;
 
@@ -26,11 +30,39 @@ int main(int argc, char** argv){
     commandSender->createSocket(TeamType::Yellow);
     debugSender->createSocket(TeamType::Yellow);
 
+    //Pacote da bola
+    struct sockaddr_in addrBall;
+    addrBall.sin_family = AF_INET;
+    inet_aton(argv[1], &addrBall.sin_addr);
+    addrBall.sin_port = htons(9000);
+    int sockBall = socket(PF_INET, SOCK_DGRAM, 0);
+
+    //Pacote do time amarelo
+    struct sockaddr_in addrYellow;
+    addrYellow.sin_family = AF_INET;
+    inet_aton(argv[1], &addrYellow.sin_addr);
+    addrYellow.sin_port = htons(9001);
+    int sockYellow = socket(PF_INET, SOCK_DGRAM, 0);
+
+    //Pacote do time azul
+    struct sockaddr_in addrBlue;
+    addrBlue.sin_family = AF_INET;
+    inet_aton(argv[1], &addrBlue.sin_addr);
+    addrBlue.sin_port = htons(9002);
+    int sockBlue = socket(PF_INET, SOCK_DGRAM, 0);
+
     GOOGLE_PROTOBUF_VERIFY_VERSION;
     RoboimeData::DataBall dataBall;
     RoboimeData::DataYellow dataYellow;
     RoboimeData::DataBlue dataBlue;
     RoboimeData::DataReceiver dataReceiver;
+
+    std::string bufBall;
+    std::string bufYellow;
+    std::string bufBlue;
+    std::string bufReceiver;
+
+
 
     while(true){
         state = stateReceiver->receiveState(FieldTransformationType::None);
@@ -78,10 +110,23 @@ int main(int argc, char** argv){
         dataBlue.set_blue2speedy(state.teamBlue[2].speedY);
         dataBlue.set_blue2speedangle(state.teamBlue[2].speedAngle);
         
+        //Transformando dados em string
+        dataBall.SerializeToString(&bufBall);
+        dataYellow.SerializeToString(&bufYellow);
+        dataBlue.SerializeToString(&bufBlue);
+
+        sendto(sockBall, bufBall.data(), bufBall.size()+1, 0, (struct sockaddr *)&addrBall, sizeof(addrBall));
+        sendto(sockYellow, bufYellow.data(), bufYellow.size()+1, 0, (struct sockaddr *)&addrYellow, sizeof(addrYellow));
+        sendto(sockBlue, bufBlue.data(), bufBlue.size()+1, 0, (struct sockaddr *)&addrBlue, sizeof(addrBlue));
+
+        bufBall.clear();
+        bufYellow.clear();
+        bufBlue.clear();
+
         //std::cout << state << std::endl;
 	    //std::cout << state.ball << std::endl;
 	    //std::cout << state.teamYellow[1].speedX << std::endl;
-        std::cout << "ta funcionando =)" << dataYellow.yellow1posex() << std::endl;
+        std::cout << "ta funcionando =) " << dataYellow.yellow1posex() << std::endl;
         send_commands();
         send_debug();
     }
