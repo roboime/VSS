@@ -1,0 +1,63 @@
+syntax = "proto2";
+
+package RoboimeData;
+
+message DataBall {
+	required float ballPoseX = 1;
+	required float ballPoseY = 2;
+	required float ballSpeedX = 3;
+	required float ballSpeedY = 4;
+}
+
+message DataYellow {
+	required float yellow0PoseX = 1;
+	required float yellow0PoseY = 2;
+	required float yellow0Angle = 3;
+	required float yellow0SpeedX = 4;
+	required float yellow0SpeedY = 5;
+	required float yellow0SpeedAngle = 6;
+	required float yellow1PoseX = 7;
+	required float yellow1PoseY = 8;
+	required float yellow1Angle = 9;
+	required float yellow1SpeedX = 10;
+	required float yellow1SpeedY = 11;
+	required float yellow1SpeedAngle = 12;
+	required float yellow2PoseX = 13;
+	required float yellow2PoseY = 14;
+	required float yellow2Angle = 15;
+	required float yellow2SpeedX = 16;
+	required float yellow2SpeedY = 17;
+	required float yellow2SpeedAngle = 18;
+}
+
+message DataBlue{
+	required float blue0PoseX = 1;
+	required float blue0PoseY = 2;
+	required float blue0Angle = 3;
+	required float blue0SpeedX = 4;
+	required float blue0SpeedY = 5;
+	required float blue0SpeedAngle = 6;
+	required float blue1PoseX = 7;
+	required float blue1PoseY = 8;
+	required float blue1Angle = 9;
+	required float blue1SpeedX = 10;
+	required float blue1SpeedY = 11;
+	required float blue1SpeedAngle = 12;
+	required float blue2PoseX = 13;
+	required float blue2PoseY = 14;
+	required float blue2Angle = 15;
+	required float blue2SpeedX = 16;
+	required float blue2SpeedY = 17;
+	required float blue2SpeedAngle = 18;
+}
+
+message DataReceiver{
+	required uint32 friend0VelEsq = 1;	
+	required uint32 friend0VelDir = 2;
+	required uint32 friend1VelEsq = 3;	
+	required uint32 friend1VelDir = 4;
+	required uint32 friend2VelEsq = 5;	
+	required uint32 friend2VelDir = 6;
+}
+	
+	
