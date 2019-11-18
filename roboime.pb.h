@@ -36,138 +36,11 @@ void protobuf_AddDesc_roboime_2eproto();
 void protobuf_AssignDesc_roboime_2eproto();
 void protobuf_ShutdownFile_roboime_2eproto();
 
-class DataBall;
 class DataBlue;
 class DataReceiver;
 class DataYellow;
 
 // ===================================================================
-
-class DataBall : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:RoboimeData.DataBall) */ {
- public:
-  DataBall();
-  virtual ~DataBall();
-
-  DataBall(const DataBall& from);
-
-  inline DataBall& operator=(const DataBall& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const DataBall& default_instance();
-
-  void Swap(DataBall* other);
-
-  // implements Message ----------------------------------------------
-
-  inline DataBall* New() const { return New(NULL); }
-
-  DataBall* New(::google::protobuf::Arena* arena) const;
-  void CopyFrom(const ::google::protobuf::Message& from);
-  void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const DataBall& from);
-  void MergeFrom(const DataBall& from);
-  void Clear();
-  bool IsInitialized() const;
-
-  int ByteSize() const;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input);
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
-    return InternalSerializeWithCachedSizesToArray(false, output);
-  }
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(DataBall* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return _internal_metadata_.arena();
-  }
-  inline void* MaybeArenaPtr() const {
-    return _internal_metadata_.raw_arena_ptr();
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // required float ballPoseX = 1;
-  bool has_ballposex() const;
-  void clear_ballposex();
-  static const int kBallPoseXFieldNumber = 1;
-  float ballposex() const;
-  void set_ballposex(float value);
-
-  // required float ballPoseY = 2;
-  bool has_ballposey() const;
-  void clear_ballposey();
-  static const int kBallPoseYFieldNumber = 2;
-  float ballposey() const;
-  void set_ballposey(float value);
-
-  // required float ballSpeedX = 3;
-  bool has_ballspeedx() const;
-  void clear_ballspeedx();
-  static const int kBallSpeedXFieldNumber = 3;
-  float ballspeedx() const;
-  void set_ballspeedx(float value);
-
-  // required float ballSpeedY = 4;
-  bool has_ballspeedy() const;
-  void clear_ballspeedy();
-  static const int kBallSpeedYFieldNumber = 4;
-  float ballspeedy() const;
-  void set_ballspeedy(float value);
-
-  // @@protoc_insertion_point(class_scope:RoboimeData.DataBall)
- private:
-  inline void set_has_ballposex();
-  inline void clear_has_ballposex();
-  inline void set_has_ballposey();
-  inline void clear_has_ballposey();
-  inline void set_has_ballspeedx();
-  inline void clear_has_ballspeedx();
-  inline void set_has_ballspeedy();
-  inline void clear_has_ballspeedy();
-
-  // helper for ByteSize()
-  int RequiredFieldsByteSizeFallback() const;
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 _has_bits_[1];
-  mutable int _cached_size_;
-  float ballposex_;
-  float ballposey_;
-  float ballspeedx_;
-  float ballspeedy_;
-  friend void  protobuf_AddDesc_roboime_2eproto();
-  friend void protobuf_AssignDesc_roboime_2eproto();
-  friend void protobuf_ShutdownFile_roboime_2eproto();
-
-  void InitAsDefaultInstance();
-  static DataBall* default_instance_;
-};
-// -------------------------------------------------------------------
 
 class DataYellow : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:RoboimeData.DataYellow) */ {
  public:
@@ -237,170 +110,107 @@ class DataYellow : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // required float yellow0PoseX = 1;
+  // required float ballPoseX = 1;
+  bool has_ballposex() const;
+  void clear_ballposex();
+  static const int kBallPoseXFieldNumber = 1;
+  float ballposex() const;
+  void set_ballposex(float value);
+
+  // required float ballPoseY = 2;
+  bool has_ballposey() const;
+  void clear_ballposey();
+  static const int kBallPoseYFieldNumber = 2;
+  float ballposey() const;
+  void set_ballposey(float value);
+
+  // required float yellow0PoseX = 3;
   bool has_yellow0posex() const;
   void clear_yellow0posex();
-  static const int kYellow0PoseXFieldNumber = 1;
+  static const int kYellow0PoseXFieldNumber = 3;
   float yellow0posex() const;
   void set_yellow0posex(float value);
 
-  // required float yellow0PoseY = 2;
+  // required float yellow0PoseY = 4;
   bool has_yellow0posey() const;
   void clear_yellow0posey();
-  static const int kYellow0PoseYFieldNumber = 2;
+  static const int kYellow0PoseYFieldNumber = 4;
   float yellow0posey() const;
   void set_yellow0posey(float value);
 
-  // required float yellow0Angle = 3;
+  // required float yellow0Angle = 5;
   bool has_yellow0angle() const;
   void clear_yellow0angle();
-  static const int kYellow0AngleFieldNumber = 3;
+  static const int kYellow0AngleFieldNumber = 5;
   float yellow0angle() const;
   void set_yellow0angle(float value);
 
-  // required float yellow0SpeedX = 4;
-  bool has_yellow0speedx() const;
-  void clear_yellow0speedx();
-  static const int kYellow0SpeedXFieldNumber = 4;
-  float yellow0speedx() const;
-  void set_yellow0speedx(float value);
-
-  // required float yellow0SpeedY = 5;
-  bool has_yellow0speedy() const;
-  void clear_yellow0speedy();
-  static const int kYellow0SpeedYFieldNumber = 5;
-  float yellow0speedy() const;
-  void set_yellow0speedy(float value);
-
-  // required float yellow0SpeedAngle = 6;
-  bool has_yellow0speedangle() const;
-  void clear_yellow0speedangle();
-  static const int kYellow0SpeedAngleFieldNumber = 6;
-  float yellow0speedangle() const;
-  void set_yellow0speedangle(float value);
-
-  // required float yellow1PoseX = 7;
+  // required float yellow1PoseX = 6;
   bool has_yellow1posex() const;
   void clear_yellow1posex();
-  static const int kYellow1PoseXFieldNumber = 7;
+  static const int kYellow1PoseXFieldNumber = 6;
   float yellow1posex() const;
   void set_yellow1posex(float value);
 
-  // required float yellow1PoseY = 8;
+  // required float yellow1PoseY = 7;
   bool has_yellow1posey() const;
   void clear_yellow1posey();
-  static const int kYellow1PoseYFieldNumber = 8;
+  static const int kYellow1PoseYFieldNumber = 7;
   float yellow1posey() const;
   void set_yellow1posey(float value);
 
-  // required float yellow1Angle = 9;
+  // required float yellow1Angle = 8;
   bool has_yellow1angle() const;
   void clear_yellow1angle();
-  static const int kYellow1AngleFieldNumber = 9;
+  static const int kYellow1AngleFieldNumber = 8;
   float yellow1angle() const;
   void set_yellow1angle(float value);
 
-  // required float yellow1SpeedX = 10;
-  bool has_yellow1speedx() const;
-  void clear_yellow1speedx();
-  static const int kYellow1SpeedXFieldNumber = 10;
-  float yellow1speedx() const;
-  void set_yellow1speedx(float value);
-
-  // required float yellow1SpeedY = 11;
-  bool has_yellow1speedy() const;
-  void clear_yellow1speedy();
-  static const int kYellow1SpeedYFieldNumber = 11;
-  float yellow1speedy() const;
-  void set_yellow1speedy(float value);
-
-  // required float yellow1SpeedAngle = 12;
-  bool has_yellow1speedangle() const;
-  void clear_yellow1speedangle();
-  static const int kYellow1SpeedAngleFieldNumber = 12;
-  float yellow1speedangle() const;
-  void set_yellow1speedangle(float value);
-
-  // required float yellow2PoseX = 13;
+  // required float yellow2PoseX = 9;
   bool has_yellow2posex() const;
   void clear_yellow2posex();
-  static const int kYellow2PoseXFieldNumber = 13;
+  static const int kYellow2PoseXFieldNumber = 9;
   float yellow2posex() const;
   void set_yellow2posex(float value);
 
-  // required float yellow2PoseY = 14;
+  // required float yellow2PoseY = 10;
   bool has_yellow2posey() const;
   void clear_yellow2posey();
-  static const int kYellow2PoseYFieldNumber = 14;
+  static const int kYellow2PoseYFieldNumber = 10;
   float yellow2posey() const;
   void set_yellow2posey(float value);
 
-  // required float yellow2Angle = 15;
+  // required float yellow2Angle = 11;
   bool has_yellow2angle() const;
   void clear_yellow2angle();
-  static const int kYellow2AngleFieldNumber = 15;
+  static const int kYellow2AngleFieldNumber = 11;
   float yellow2angle() const;
   void set_yellow2angle(float value);
 
-  // required float yellow2SpeedX = 16;
-  bool has_yellow2speedx() const;
-  void clear_yellow2speedx();
-  static const int kYellow2SpeedXFieldNumber = 16;
-  float yellow2speedx() const;
-  void set_yellow2speedx(float value);
-
-  // required float yellow2SpeedY = 17;
-  bool has_yellow2speedy() const;
-  void clear_yellow2speedy();
-  static const int kYellow2SpeedYFieldNumber = 17;
-  float yellow2speedy() const;
-  void set_yellow2speedy(float value);
-
-  // required float yellow2SpeedAngle = 18;
-  bool has_yellow2speedangle() const;
-  void clear_yellow2speedangle();
-  static const int kYellow2SpeedAngleFieldNumber = 18;
-  float yellow2speedangle() const;
-  void set_yellow2speedangle(float value);
-
   // @@protoc_insertion_point(class_scope:RoboimeData.DataYellow)
  private:
+  inline void set_has_ballposex();
+  inline void clear_has_ballposex();
+  inline void set_has_ballposey();
+  inline void clear_has_ballposey();
   inline void set_has_yellow0posex();
   inline void clear_has_yellow0posex();
   inline void set_has_yellow0posey();
   inline void clear_has_yellow0posey();
   inline void set_has_yellow0angle();
   inline void clear_has_yellow0angle();
-  inline void set_has_yellow0speedx();
-  inline void clear_has_yellow0speedx();
-  inline void set_has_yellow0speedy();
-  inline void clear_has_yellow0speedy();
-  inline void set_has_yellow0speedangle();
-  inline void clear_has_yellow0speedangle();
   inline void set_has_yellow1posex();
   inline void clear_has_yellow1posex();
   inline void set_has_yellow1posey();
   inline void clear_has_yellow1posey();
   inline void set_has_yellow1angle();
   inline void clear_has_yellow1angle();
-  inline void set_has_yellow1speedx();
-  inline void clear_has_yellow1speedx();
-  inline void set_has_yellow1speedy();
-  inline void clear_has_yellow1speedy();
-  inline void set_has_yellow1speedangle();
-  inline void clear_has_yellow1speedangle();
   inline void set_has_yellow2posex();
   inline void clear_has_yellow2posex();
   inline void set_has_yellow2posey();
   inline void clear_has_yellow2posey();
   inline void set_has_yellow2angle();
   inline void clear_has_yellow2angle();
-  inline void set_has_yellow2speedx();
-  inline void clear_has_yellow2speedx();
-  inline void set_has_yellow2speedy();
-  inline void clear_has_yellow2speedy();
-  inline void set_has_yellow2speedangle();
-  inline void clear_has_yellow2speedangle();
 
   // helper for ByteSize()
   int RequiredFieldsByteSizeFallback() const;
@@ -408,24 +218,17 @@ class DataYellow : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::uint32 _has_bits_[1];
   mutable int _cached_size_;
+  float ballposex_;
+  float ballposey_;
   float yellow0posex_;
   float yellow0posey_;
   float yellow0angle_;
-  float yellow0speedx_;
-  float yellow0speedy_;
-  float yellow0speedangle_;
   float yellow1posex_;
   float yellow1posey_;
   float yellow1angle_;
-  float yellow1speedx_;
-  float yellow1speedy_;
-  float yellow1speedangle_;
   float yellow2posex_;
   float yellow2posey_;
   float yellow2angle_;
-  float yellow2speedx_;
-  float yellow2speedy_;
-  float yellow2speedangle_;
   friend void  protobuf_AddDesc_roboime_2eproto();
   friend void protobuf_AssignDesc_roboime_2eproto();
   friend void protobuf_ShutdownFile_roboime_2eproto();
@@ -524,110 +327,47 @@ class DataBlue : public ::google::protobuf::Message /* @@protoc_insertion_point(
   float blue0angle() const;
   void set_blue0angle(float value);
 
-  // required float blue0SpeedX = 4;
-  bool has_blue0speedx() const;
-  void clear_blue0speedx();
-  static const int kBlue0SpeedXFieldNumber = 4;
-  float blue0speedx() const;
-  void set_blue0speedx(float value);
-
-  // required float blue0SpeedY = 5;
-  bool has_blue0speedy() const;
-  void clear_blue0speedy();
-  static const int kBlue0SpeedYFieldNumber = 5;
-  float blue0speedy() const;
-  void set_blue0speedy(float value);
-
-  // required float blue0SpeedAngle = 6;
-  bool has_blue0speedangle() const;
-  void clear_blue0speedangle();
-  static const int kBlue0SpeedAngleFieldNumber = 6;
-  float blue0speedangle() const;
-  void set_blue0speedangle(float value);
-
-  // required float blue1PoseX = 7;
+  // required float blue1PoseX = 4;
   bool has_blue1posex() const;
   void clear_blue1posex();
-  static const int kBlue1PoseXFieldNumber = 7;
+  static const int kBlue1PoseXFieldNumber = 4;
   float blue1posex() const;
   void set_blue1posex(float value);
 
-  // required float blue1PoseY = 8;
+  // required float blue1PoseY = 5;
   bool has_blue1posey() const;
   void clear_blue1posey();
-  static const int kBlue1PoseYFieldNumber = 8;
+  static const int kBlue1PoseYFieldNumber = 5;
   float blue1posey() const;
   void set_blue1posey(float value);
 
-  // required float blue1Angle = 9;
+  // required float blue1Angle = 6;
   bool has_blue1angle() const;
   void clear_blue1angle();
-  static const int kBlue1AngleFieldNumber = 9;
+  static const int kBlue1AngleFieldNumber = 6;
   float blue1angle() const;
   void set_blue1angle(float value);
 
-  // required float blue1SpeedX = 10;
-  bool has_blue1speedx() const;
-  void clear_blue1speedx();
-  static const int kBlue1SpeedXFieldNumber = 10;
-  float blue1speedx() const;
-  void set_blue1speedx(float value);
-
-  // required float blue1SpeedY = 11;
-  bool has_blue1speedy() const;
-  void clear_blue1speedy();
-  static const int kBlue1SpeedYFieldNumber = 11;
-  float blue1speedy() const;
-  void set_blue1speedy(float value);
-
-  // required float blue1SpeedAngle = 12;
-  bool has_blue1speedangle() const;
-  void clear_blue1speedangle();
-  static const int kBlue1SpeedAngleFieldNumber = 12;
-  float blue1speedangle() const;
-  void set_blue1speedangle(float value);
-
-  // required float blue2PoseX = 13;
+  // required float blue2PoseX = 7;
   bool has_blue2posex() const;
   void clear_blue2posex();
-  static const int kBlue2PoseXFieldNumber = 13;
+  static const int kBlue2PoseXFieldNumber = 7;
   float blue2posex() const;
   void set_blue2posex(float value);
 
-  // required float blue2PoseY = 14;
+  // required float blue2PoseY = 8;
   bool has_blue2posey() const;
   void clear_blue2posey();
-  static const int kBlue2PoseYFieldNumber = 14;
+  static const int kBlue2PoseYFieldNumber = 8;
   float blue2posey() const;
   void set_blue2posey(float value);
 
-  // required float blue2Angle = 15;
+  // required float blue2Angle = 9;
   bool has_blue2angle() const;
   void clear_blue2angle();
-  static const int kBlue2AngleFieldNumber = 15;
+  static const int kBlue2AngleFieldNumber = 9;
   float blue2angle() const;
   void set_blue2angle(float value);
-
-  // required float blue2SpeedX = 16;
-  bool has_blue2speedx() const;
-  void clear_blue2speedx();
-  static const int kBlue2SpeedXFieldNumber = 16;
-  float blue2speedx() const;
-  void set_blue2speedx(float value);
-
-  // required float blue2SpeedY = 17;
-  bool has_blue2speedy() const;
-  void clear_blue2speedy();
-  static const int kBlue2SpeedYFieldNumber = 17;
-  float blue2speedy() const;
-  void set_blue2speedy(float value);
-
-  // required float blue2SpeedAngle = 18;
-  bool has_blue2speedangle() const;
-  void clear_blue2speedangle();
-  static const int kBlue2SpeedAngleFieldNumber = 18;
-  float blue2speedangle() const;
-  void set_blue2speedangle(float value);
 
   // @@protoc_insertion_point(class_scope:RoboimeData.DataBlue)
  private:
@@ -637,36 +377,18 @@ class DataBlue : public ::google::protobuf::Message /* @@protoc_insertion_point(
   inline void clear_has_blue0posey();
   inline void set_has_blue0angle();
   inline void clear_has_blue0angle();
-  inline void set_has_blue0speedx();
-  inline void clear_has_blue0speedx();
-  inline void set_has_blue0speedy();
-  inline void clear_has_blue0speedy();
-  inline void set_has_blue0speedangle();
-  inline void clear_has_blue0speedangle();
   inline void set_has_blue1posex();
   inline void clear_has_blue1posex();
   inline void set_has_blue1posey();
   inline void clear_has_blue1posey();
   inline void set_has_blue1angle();
   inline void clear_has_blue1angle();
-  inline void set_has_blue1speedx();
-  inline void clear_has_blue1speedx();
-  inline void set_has_blue1speedy();
-  inline void clear_has_blue1speedy();
-  inline void set_has_blue1speedangle();
-  inline void clear_has_blue1speedangle();
   inline void set_has_blue2posex();
   inline void clear_has_blue2posex();
   inline void set_has_blue2posey();
   inline void clear_has_blue2posey();
   inline void set_has_blue2angle();
   inline void clear_has_blue2angle();
-  inline void set_has_blue2speedx();
-  inline void clear_has_blue2speedx();
-  inline void set_has_blue2speedy();
-  inline void clear_has_blue2speedy();
-  inline void set_has_blue2speedangle();
-  inline void clear_has_blue2speedangle();
 
   // helper for ByteSize()
   int RequiredFieldsByteSizeFallback() const;
@@ -677,21 +399,12 @@ class DataBlue : public ::google::protobuf::Message /* @@protoc_insertion_point(
   float blue0posex_;
   float blue0posey_;
   float blue0angle_;
-  float blue0speedx_;
-  float blue0speedy_;
-  float blue0speedangle_;
   float blue1posex_;
   float blue1posey_;
   float blue1angle_;
-  float blue1speedx_;
-  float blue1speedy_;
-  float blue1speedangle_;
   float blue2posex_;
   float blue2posey_;
   float blue2angle_;
-  float blue2speedx_;
-  float blue2speedy_;
-  float blue2speedangle_;
   friend void  protobuf_AddDesc_roboime_2eproto();
   friend void protobuf_AssignDesc_roboime_2eproto();
   friend void protobuf_ShutdownFile_roboime_2eproto();
@@ -851,117 +564,65 @@ class DataReceiver : public ::google::protobuf::Message /* @@protoc_insertion_po
 // ===================================================================
 
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
-// DataBall
+// DataYellow
 
 // required float ballPoseX = 1;
-inline bool DataBall::has_ballposex() const {
+inline bool DataYellow::has_ballposex() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void DataBall::set_has_ballposex() {
+inline void DataYellow::set_has_ballposex() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void DataBall::clear_has_ballposex() {
+inline void DataYellow::clear_has_ballposex() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void DataBall::clear_ballposex() {
+inline void DataYellow::clear_ballposex() {
   ballposex_ = 0;
   clear_has_ballposex();
 }
-inline float DataBall::ballposex() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBall.ballPoseX)
+inline float DataYellow::ballposex() const {
+  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.ballPoseX)
   return ballposex_;
 }
-inline void DataBall::set_ballposex(float value) {
+inline void DataYellow::set_ballposex(float value) {
   set_has_ballposex();
   ballposex_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBall.ballPoseX)
+  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.ballPoseX)
 }
 
 // required float ballPoseY = 2;
-inline bool DataBall::has_ballposey() const {
+inline bool DataYellow::has_ballposey() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void DataBall::set_has_ballposey() {
+inline void DataYellow::set_has_ballposey() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void DataBall::clear_has_ballposey() {
+inline void DataYellow::clear_has_ballposey() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void DataBall::clear_ballposey() {
+inline void DataYellow::clear_ballposey() {
   ballposey_ = 0;
   clear_has_ballposey();
 }
-inline float DataBall::ballposey() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBall.ballPoseY)
+inline float DataYellow::ballposey() const {
+  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.ballPoseY)
   return ballposey_;
 }
-inline void DataBall::set_ballposey(float value) {
+inline void DataYellow::set_ballposey(float value) {
   set_has_ballposey();
   ballposey_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBall.ballPoseY)
+  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.ballPoseY)
 }
 
-// required float ballSpeedX = 3;
-inline bool DataBall::has_ballspeedx() const {
+// required float yellow0PoseX = 3;
+inline bool DataYellow::has_yellow0posex() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void DataBall::set_has_ballspeedx() {
+inline void DataYellow::set_has_yellow0posex() {
   _has_bits_[0] |= 0x00000004u;
 }
-inline void DataBall::clear_has_ballspeedx() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void DataBall::clear_ballspeedx() {
-  ballspeedx_ = 0;
-  clear_has_ballspeedx();
-}
-inline float DataBall::ballspeedx() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBall.ballSpeedX)
-  return ballspeedx_;
-}
-inline void DataBall::set_ballspeedx(float value) {
-  set_has_ballspeedx();
-  ballspeedx_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBall.ballSpeedX)
-}
-
-// required float ballSpeedY = 4;
-inline bool DataBall::has_ballspeedy() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void DataBall::set_has_ballspeedy() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void DataBall::clear_has_ballspeedy() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void DataBall::clear_ballspeedy() {
-  ballspeedy_ = 0;
-  clear_has_ballspeedy();
-}
-inline float DataBall::ballspeedy() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBall.ballSpeedY)
-  return ballspeedy_;
-}
-inline void DataBall::set_ballspeedy(float value) {
-  set_has_ballspeedy();
-  ballspeedy_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBall.ballSpeedY)
-}
-
-// -------------------------------------------------------------------
-
-// DataYellow
-
-// required float yellow0PoseX = 1;
-inline bool DataYellow::has_yellow0posex() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void DataYellow::set_has_yellow0posex() {
-  _has_bits_[0] |= 0x00000001u;
-}
 inline void DataYellow::clear_has_yellow0posex() {
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void DataYellow::clear_yellow0posex() {
   yellow0posex_ = 0;
@@ -977,15 +638,15 @@ inline void DataYellow::set_yellow0posex(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow0PoseX)
 }
 
-// required float yellow0PoseY = 2;
+// required float yellow0PoseY = 4;
 inline bool DataYellow::has_yellow0posey() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void DataYellow::set_has_yellow0posey() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void DataYellow::clear_has_yellow0posey() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void DataYellow::clear_yellow0posey() {
   yellow0posey_ = 0;
@@ -1001,15 +662,15 @@ inline void DataYellow::set_yellow0posey(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow0PoseY)
 }
 
-// required float yellow0Angle = 3;
+// required float yellow0Angle = 5;
 inline bool DataYellow::has_yellow0angle() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void DataYellow::set_has_yellow0angle() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void DataYellow::clear_has_yellow0angle() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void DataYellow::clear_yellow0angle() {
   yellow0angle_ = 0;
@@ -1025,87 +686,15 @@ inline void DataYellow::set_yellow0angle(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow0Angle)
 }
 
-// required float yellow0SpeedX = 4;
-inline bool DataYellow::has_yellow0speedx() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void DataYellow::set_has_yellow0speedx() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void DataYellow::clear_has_yellow0speedx() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void DataYellow::clear_yellow0speedx() {
-  yellow0speedx_ = 0;
-  clear_has_yellow0speedx();
-}
-inline float DataYellow::yellow0speedx() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.yellow0SpeedX)
-  return yellow0speedx_;
-}
-inline void DataYellow::set_yellow0speedx(float value) {
-  set_has_yellow0speedx();
-  yellow0speedx_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow0SpeedX)
-}
-
-// required float yellow0SpeedY = 5;
-inline bool DataYellow::has_yellow0speedy() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void DataYellow::set_has_yellow0speedy() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void DataYellow::clear_has_yellow0speedy() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void DataYellow::clear_yellow0speedy() {
-  yellow0speedy_ = 0;
-  clear_has_yellow0speedy();
-}
-inline float DataYellow::yellow0speedy() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.yellow0SpeedY)
-  return yellow0speedy_;
-}
-inline void DataYellow::set_yellow0speedy(float value) {
-  set_has_yellow0speedy();
-  yellow0speedy_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow0SpeedY)
-}
-
-// required float yellow0SpeedAngle = 6;
-inline bool DataYellow::has_yellow0speedangle() const {
+// required float yellow1PoseX = 6;
+inline bool DataYellow::has_yellow1posex() const {
   return (_has_bits_[0] & 0x00000020u) != 0;
 }
-inline void DataYellow::set_has_yellow0speedangle() {
+inline void DataYellow::set_has_yellow1posex() {
   _has_bits_[0] |= 0x00000020u;
 }
-inline void DataYellow::clear_has_yellow0speedangle() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void DataYellow::clear_yellow0speedangle() {
-  yellow0speedangle_ = 0;
-  clear_has_yellow0speedangle();
-}
-inline float DataYellow::yellow0speedangle() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.yellow0SpeedAngle)
-  return yellow0speedangle_;
-}
-inline void DataYellow::set_yellow0speedangle(float value) {
-  set_has_yellow0speedangle();
-  yellow0speedangle_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow0SpeedAngle)
-}
-
-// required float yellow1PoseX = 7;
-inline bool DataYellow::has_yellow1posex() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void DataYellow::set_has_yellow1posex() {
-  _has_bits_[0] |= 0x00000040u;
-}
 inline void DataYellow::clear_has_yellow1posex() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void DataYellow::clear_yellow1posex() {
   yellow1posex_ = 0;
@@ -1121,15 +710,15 @@ inline void DataYellow::set_yellow1posex(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow1PoseX)
 }
 
-// required float yellow1PoseY = 8;
+// required float yellow1PoseY = 7;
 inline bool DataYellow::has_yellow1posey() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void DataYellow::set_has_yellow1posey() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void DataYellow::clear_has_yellow1posey() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void DataYellow::clear_yellow1posey() {
   yellow1posey_ = 0;
@@ -1145,15 +734,15 @@ inline void DataYellow::set_yellow1posey(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow1PoseY)
 }
 
-// required float yellow1Angle = 9;
+// required float yellow1Angle = 8;
 inline bool DataYellow::has_yellow1angle() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void DataYellow::set_has_yellow1angle() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void DataYellow::clear_has_yellow1angle() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void DataYellow::clear_yellow1angle() {
   yellow1angle_ = 0;
@@ -1169,87 +758,15 @@ inline void DataYellow::set_yellow1angle(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow1Angle)
 }
 
-// required float yellow1SpeedX = 10;
-inline bool DataYellow::has_yellow1speedx() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
-}
-inline void DataYellow::set_has_yellow1speedx() {
-  _has_bits_[0] |= 0x00000200u;
-}
-inline void DataYellow::clear_has_yellow1speedx() {
-  _has_bits_[0] &= ~0x00000200u;
-}
-inline void DataYellow::clear_yellow1speedx() {
-  yellow1speedx_ = 0;
-  clear_has_yellow1speedx();
-}
-inline float DataYellow::yellow1speedx() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.yellow1SpeedX)
-  return yellow1speedx_;
-}
-inline void DataYellow::set_yellow1speedx(float value) {
-  set_has_yellow1speedx();
-  yellow1speedx_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow1SpeedX)
-}
-
-// required float yellow1SpeedY = 11;
-inline bool DataYellow::has_yellow1speedy() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
-}
-inline void DataYellow::set_has_yellow1speedy() {
-  _has_bits_[0] |= 0x00000400u;
-}
-inline void DataYellow::clear_has_yellow1speedy() {
-  _has_bits_[0] &= ~0x00000400u;
-}
-inline void DataYellow::clear_yellow1speedy() {
-  yellow1speedy_ = 0;
-  clear_has_yellow1speedy();
-}
-inline float DataYellow::yellow1speedy() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.yellow1SpeedY)
-  return yellow1speedy_;
-}
-inline void DataYellow::set_yellow1speedy(float value) {
-  set_has_yellow1speedy();
-  yellow1speedy_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow1SpeedY)
-}
-
-// required float yellow1SpeedAngle = 12;
-inline bool DataYellow::has_yellow1speedangle() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
-}
-inline void DataYellow::set_has_yellow1speedangle() {
-  _has_bits_[0] |= 0x00000800u;
-}
-inline void DataYellow::clear_has_yellow1speedangle() {
-  _has_bits_[0] &= ~0x00000800u;
-}
-inline void DataYellow::clear_yellow1speedangle() {
-  yellow1speedangle_ = 0;
-  clear_has_yellow1speedangle();
-}
-inline float DataYellow::yellow1speedangle() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.yellow1SpeedAngle)
-  return yellow1speedangle_;
-}
-inline void DataYellow::set_yellow1speedangle(float value) {
-  set_has_yellow1speedangle();
-  yellow1speedangle_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow1SpeedAngle)
-}
-
-// required float yellow2PoseX = 13;
+// required float yellow2PoseX = 9;
 inline bool DataYellow::has_yellow2posex() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void DataYellow::set_has_yellow2posex() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void DataYellow::clear_has_yellow2posex() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void DataYellow::clear_yellow2posex() {
   yellow2posex_ = 0;
@@ -1265,15 +782,15 @@ inline void DataYellow::set_yellow2posex(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow2PoseX)
 }
 
-// required float yellow2PoseY = 14;
+// required float yellow2PoseY = 10;
 inline bool DataYellow::has_yellow2posey() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void DataYellow::set_has_yellow2posey() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void DataYellow::clear_has_yellow2posey() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void DataYellow::clear_yellow2posey() {
   yellow2posey_ = 0;
@@ -1289,15 +806,15 @@ inline void DataYellow::set_yellow2posey(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow2PoseY)
 }
 
-// required float yellow2Angle = 15;
+// required float yellow2Angle = 11;
 inline bool DataYellow::has_yellow2angle() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 inline void DataYellow::set_has_yellow2angle() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00000400u;
 }
 inline void DataYellow::clear_has_yellow2angle() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void DataYellow::clear_yellow2angle() {
   yellow2angle_ = 0;
@@ -1311,78 +828,6 @@ inline void DataYellow::set_yellow2angle(float value) {
   set_has_yellow2angle();
   yellow2angle_ = value;
   // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow2Angle)
-}
-
-// required float yellow2SpeedX = 16;
-inline bool DataYellow::has_yellow2speedx() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
-}
-inline void DataYellow::set_has_yellow2speedx() {
-  _has_bits_[0] |= 0x00008000u;
-}
-inline void DataYellow::clear_has_yellow2speedx() {
-  _has_bits_[0] &= ~0x00008000u;
-}
-inline void DataYellow::clear_yellow2speedx() {
-  yellow2speedx_ = 0;
-  clear_has_yellow2speedx();
-}
-inline float DataYellow::yellow2speedx() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.yellow2SpeedX)
-  return yellow2speedx_;
-}
-inline void DataYellow::set_yellow2speedx(float value) {
-  set_has_yellow2speedx();
-  yellow2speedx_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow2SpeedX)
-}
-
-// required float yellow2SpeedY = 17;
-inline bool DataYellow::has_yellow2speedy() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
-}
-inline void DataYellow::set_has_yellow2speedy() {
-  _has_bits_[0] |= 0x00010000u;
-}
-inline void DataYellow::clear_has_yellow2speedy() {
-  _has_bits_[0] &= ~0x00010000u;
-}
-inline void DataYellow::clear_yellow2speedy() {
-  yellow2speedy_ = 0;
-  clear_has_yellow2speedy();
-}
-inline float DataYellow::yellow2speedy() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.yellow2SpeedY)
-  return yellow2speedy_;
-}
-inline void DataYellow::set_yellow2speedy(float value) {
-  set_has_yellow2speedy();
-  yellow2speedy_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow2SpeedY)
-}
-
-// required float yellow2SpeedAngle = 18;
-inline bool DataYellow::has_yellow2speedangle() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
-}
-inline void DataYellow::set_has_yellow2speedangle() {
-  _has_bits_[0] |= 0x00020000u;
-}
-inline void DataYellow::clear_has_yellow2speedangle() {
-  _has_bits_[0] &= ~0x00020000u;
-}
-inline void DataYellow::clear_yellow2speedangle() {
-  yellow2speedangle_ = 0;
-  clear_has_yellow2speedangle();
-}
-inline float DataYellow::yellow2speedangle() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataYellow.yellow2SpeedAngle)
-  return yellow2speedangle_;
-}
-inline void DataYellow::set_yellow2speedangle(float value) {
-  set_has_yellow2speedangle();
-  yellow2speedangle_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataYellow.yellow2SpeedAngle)
 }
 
 // -------------------------------------------------------------------
@@ -1461,87 +906,15 @@ inline void DataBlue::set_blue0angle(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue0Angle)
 }
 
-// required float blue0SpeedX = 4;
-inline bool DataBlue::has_blue0speedx() const {
+// required float blue1PoseX = 4;
+inline bool DataBlue::has_blue1posex() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void DataBlue::set_has_blue0speedx() {
+inline void DataBlue::set_has_blue1posex() {
   _has_bits_[0] |= 0x00000008u;
 }
-inline void DataBlue::clear_has_blue0speedx() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void DataBlue::clear_blue0speedx() {
-  blue0speedx_ = 0;
-  clear_has_blue0speedx();
-}
-inline float DataBlue::blue0speedx() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBlue.blue0SpeedX)
-  return blue0speedx_;
-}
-inline void DataBlue::set_blue0speedx(float value) {
-  set_has_blue0speedx();
-  blue0speedx_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue0SpeedX)
-}
-
-// required float blue0SpeedY = 5;
-inline bool DataBlue::has_blue0speedy() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void DataBlue::set_has_blue0speedy() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void DataBlue::clear_has_blue0speedy() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void DataBlue::clear_blue0speedy() {
-  blue0speedy_ = 0;
-  clear_has_blue0speedy();
-}
-inline float DataBlue::blue0speedy() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBlue.blue0SpeedY)
-  return blue0speedy_;
-}
-inline void DataBlue::set_blue0speedy(float value) {
-  set_has_blue0speedy();
-  blue0speedy_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue0SpeedY)
-}
-
-// required float blue0SpeedAngle = 6;
-inline bool DataBlue::has_blue0speedangle() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void DataBlue::set_has_blue0speedangle() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void DataBlue::clear_has_blue0speedangle() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void DataBlue::clear_blue0speedangle() {
-  blue0speedangle_ = 0;
-  clear_has_blue0speedangle();
-}
-inline float DataBlue::blue0speedangle() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBlue.blue0SpeedAngle)
-  return blue0speedangle_;
-}
-inline void DataBlue::set_blue0speedangle(float value) {
-  set_has_blue0speedangle();
-  blue0speedangle_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue0SpeedAngle)
-}
-
-// required float blue1PoseX = 7;
-inline bool DataBlue::has_blue1posex() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void DataBlue::set_has_blue1posex() {
-  _has_bits_[0] |= 0x00000040u;
-}
 inline void DataBlue::clear_has_blue1posex() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void DataBlue::clear_blue1posex() {
   blue1posex_ = 0;
@@ -1557,15 +930,15 @@ inline void DataBlue::set_blue1posex(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue1PoseX)
 }
 
-// required float blue1PoseY = 8;
+// required float blue1PoseY = 5;
 inline bool DataBlue::has_blue1posey() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void DataBlue::set_has_blue1posey() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void DataBlue::clear_has_blue1posey() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void DataBlue::clear_blue1posey() {
   blue1posey_ = 0;
@@ -1581,15 +954,15 @@ inline void DataBlue::set_blue1posey(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue1PoseY)
 }
 
-// required float blue1Angle = 9;
+// required float blue1Angle = 6;
 inline bool DataBlue::has_blue1angle() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void DataBlue::set_has_blue1angle() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000020u;
 }
 inline void DataBlue::clear_has_blue1angle() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void DataBlue::clear_blue1angle() {
   blue1angle_ = 0;
@@ -1605,87 +978,15 @@ inline void DataBlue::set_blue1angle(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue1Angle)
 }
 
-// required float blue1SpeedX = 10;
-inline bool DataBlue::has_blue1speedx() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
-}
-inline void DataBlue::set_has_blue1speedx() {
-  _has_bits_[0] |= 0x00000200u;
-}
-inline void DataBlue::clear_has_blue1speedx() {
-  _has_bits_[0] &= ~0x00000200u;
-}
-inline void DataBlue::clear_blue1speedx() {
-  blue1speedx_ = 0;
-  clear_has_blue1speedx();
-}
-inline float DataBlue::blue1speedx() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBlue.blue1SpeedX)
-  return blue1speedx_;
-}
-inline void DataBlue::set_blue1speedx(float value) {
-  set_has_blue1speedx();
-  blue1speedx_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue1SpeedX)
-}
-
-// required float blue1SpeedY = 11;
-inline bool DataBlue::has_blue1speedy() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
-}
-inline void DataBlue::set_has_blue1speedy() {
-  _has_bits_[0] |= 0x00000400u;
-}
-inline void DataBlue::clear_has_blue1speedy() {
-  _has_bits_[0] &= ~0x00000400u;
-}
-inline void DataBlue::clear_blue1speedy() {
-  blue1speedy_ = 0;
-  clear_has_blue1speedy();
-}
-inline float DataBlue::blue1speedy() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBlue.blue1SpeedY)
-  return blue1speedy_;
-}
-inline void DataBlue::set_blue1speedy(float value) {
-  set_has_blue1speedy();
-  blue1speedy_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue1SpeedY)
-}
-
-// required float blue1SpeedAngle = 12;
-inline bool DataBlue::has_blue1speedangle() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
-}
-inline void DataBlue::set_has_blue1speedangle() {
-  _has_bits_[0] |= 0x00000800u;
-}
-inline void DataBlue::clear_has_blue1speedangle() {
-  _has_bits_[0] &= ~0x00000800u;
-}
-inline void DataBlue::clear_blue1speedangle() {
-  blue1speedangle_ = 0;
-  clear_has_blue1speedangle();
-}
-inline float DataBlue::blue1speedangle() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBlue.blue1SpeedAngle)
-  return blue1speedangle_;
-}
-inline void DataBlue::set_blue1speedangle(float value) {
-  set_has_blue1speedangle();
-  blue1speedangle_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue1SpeedAngle)
-}
-
-// required float blue2PoseX = 13;
+// required float blue2PoseX = 7;
 inline bool DataBlue::has_blue2posex() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void DataBlue::set_has_blue2posex() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void DataBlue::clear_has_blue2posex() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void DataBlue::clear_blue2posex() {
   blue2posex_ = 0;
@@ -1701,15 +1002,15 @@ inline void DataBlue::set_blue2posex(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue2PoseX)
 }
 
-// required float blue2PoseY = 14;
+// required float blue2PoseY = 8;
 inline bool DataBlue::has_blue2posey() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void DataBlue::set_has_blue2posey() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void DataBlue::clear_has_blue2posey() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void DataBlue::clear_blue2posey() {
   blue2posey_ = 0;
@@ -1725,15 +1026,15 @@ inline void DataBlue::set_blue2posey(float value) {
   // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue2PoseY)
 }
 
-// required float blue2Angle = 15;
+// required float blue2Angle = 9;
 inline bool DataBlue::has_blue2angle() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void DataBlue::set_has_blue2angle() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void DataBlue::clear_has_blue2angle() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void DataBlue::clear_blue2angle() {
   blue2angle_ = 0;
@@ -1747,78 +1048,6 @@ inline void DataBlue::set_blue2angle(float value) {
   set_has_blue2angle();
   blue2angle_ = value;
   // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue2Angle)
-}
-
-// required float blue2SpeedX = 16;
-inline bool DataBlue::has_blue2speedx() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
-}
-inline void DataBlue::set_has_blue2speedx() {
-  _has_bits_[0] |= 0x00008000u;
-}
-inline void DataBlue::clear_has_blue2speedx() {
-  _has_bits_[0] &= ~0x00008000u;
-}
-inline void DataBlue::clear_blue2speedx() {
-  blue2speedx_ = 0;
-  clear_has_blue2speedx();
-}
-inline float DataBlue::blue2speedx() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBlue.blue2SpeedX)
-  return blue2speedx_;
-}
-inline void DataBlue::set_blue2speedx(float value) {
-  set_has_blue2speedx();
-  blue2speedx_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue2SpeedX)
-}
-
-// required float blue2SpeedY = 17;
-inline bool DataBlue::has_blue2speedy() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
-}
-inline void DataBlue::set_has_blue2speedy() {
-  _has_bits_[0] |= 0x00010000u;
-}
-inline void DataBlue::clear_has_blue2speedy() {
-  _has_bits_[0] &= ~0x00010000u;
-}
-inline void DataBlue::clear_blue2speedy() {
-  blue2speedy_ = 0;
-  clear_has_blue2speedy();
-}
-inline float DataBlue::blue2speedy() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBlue.blue2SpeedY)
-  return blue2speedy_;
-}
-inline void DataBlue::set_blue2speedy(float value) {
-  set_has_blue2speedy();
-  blue2speedy_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue2SpeedY)
-}
-
-// required float blue2SpeedAngle = 18;
-inline bool DataBlue::has_blue2speedangle() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
-}
-inline void DataBlue::set_has_blue2speedangle() {
-  _has_bits_[0] |= 0x00020000u;
-}
-inline void DataBlue::clear_has_blue2speedangle() {
-  _has_bits_[0] &= ~0x00020000u;
-}
-inline void DataBlue::clear_blue2speedangle() {
-  blue2speedangle_ = 0;
-  clear_has_blue2speedangle();
-}
-inline float DataBlue::blue2speedangle() const {
-  // @@protoc_insertion_point(field_get:RoboimeData.DataBlue.blue2SpeedAngle)
-  return blue2speedangle_;
-}
-inline void DataBlue::set_blue2speedangle(float value) {
-  set_has_blue2speedangle();
-  blue2speedangle_ = value;
-  // @@protoc_insertion_point(field_set:RoboimeData.DataBlue.blue2SpeedAngle)
 }
 
 // -------------------------------------------------------------------
@@ -1970,8 +1199,6 @@ inline void DataReceiver::set_friend2veldir(::google::protobuf::uint32 value) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
