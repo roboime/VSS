@@ -51,6 +51,29 @@ int main(int argc, char** argv){
     addrBlue.sin_port = htons(9002);
     int sockBlue = socket(PF_INET, SOCK_DGRAM, 0);
 
+    //Pacote LabView
+    struct sockaddr_in myaddr;
+    struct sockaddr_in remaddr;
+    socklen_t addrlen = sizeof(remaddr);
+    //int recvlen;
+    int fd;
+    //char buf[24];
+    
+    if((fd = socket(AF_INET, SOCK_DGRAM, 0))<0){
+      std::cout << "cannot create socket" << std::endl;
+        return 0;
+    }
+
+    memset((char *)&myaddr, 0, sizeof(myaddr));
+    myaddr.sin_family = AF_INET;
+    myaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    myaddr.sin_port = htons(9003);
+
+    if (bind(fd, (struct sockaddr *)&myaddr, sizeof(myaddr))<0){
+      std::cout << "bind failed" << std::endl;
+        return 0;
+    }
+
     GOOGLE_PROTOBUF_VERIFY_VERSION;
     //RoboimeData::DataBall dataBall;
     RoboimeData::DataYellow dataYellow;
@@ -61,6 +84,8 @@ int main(int argc, char** argv){
     std::string bufYellow;
     std::string bufBlue;
     std::string bufReceiver;
+
+    char dataReceiver[18];
 
 
 
@@ -120,10 +145,15 @@ int main(int argc, char** argv){
         bufYellow.clear();
         bufBlue.clear();
 
+        recvfrom(fd, &dataReceiver, 18, 0, (struct sockaddr *)&remaddr, &addrlen);
+        bufReceiver.ParseFromString(dataReceiver);
+        
+        std::cout << "Recebido" << bufReceiver.friend0veldir() << std::endl;
+
         //std::cout << state << std::endl;
 	    //std::cout << state.ball << std::endl;
 	    //std::cout << state.teamYellow[1].speedX << std::endl;
-        std::cout << "ta funcionando =) " << dataYellow.yellow1posex() << std::endl;
+        //std::cout << "ta funcionando =) " << dataYellow.yellow1posex() << std::endl;
         send_commands();
         send_debug();
     }
