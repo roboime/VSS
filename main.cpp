@@ -16,7 +16,7 @@ IDebugSender *debugSender;
 
 State state;
 
-void send_commands();
+void send_commands(int *vel);
 void send_debug();
 
 int main(int argc, char** argv){
@@ -83,9 +83,10 @@ int main(int argc, char** argv){
     //std::string bufBall;
     std::string bufYellow;
     std::string bufBlue;
-    std::string bufReceiver;
+    //std::string dataReceiver;
 
-    char dataReceiver[18];
+    char bufReceiver[18];
+    int recVel[6];
 
 
 
@@ -145,27 +146,35 @@ int main(int argc, char** argv){
         bufYellow.clear();
         bufBlue.clear();
 
-        recvfrom(fd, &dataReceiver, 18, 0, (struct sockaddr *)&remaddr, &addrlen);
-        bufReceiver.ParseFromString(dataReceiver);
+        recvfrom(fd, &bufReceiver, 18, 0, (struct sockaddr *)&remaddr, &addrlen);
+        dataReceiver.ParseFromString(bufReceiver);
         
-        std::cout << "Recebido" << bufReceiver.friend0veldir() << std::endl;
+	recVel[0] = 10*(dataReceiver.friend0veldir() - 256);
+	recVel[1] = 10*(dataReceiver.friend0velesq() - 256);
+	recVel[2] = 10*(dataReceiver.friend1veldir() - 256);
+	recVel[3] = 10*(dataReceiver.friend1velesq() - 256);
+	recVel[4] = 10*(dataReceiver.friend2veldir() - 256);
+	recVel[5] = 10*(dataReceiver.friend2velesq() - 256);
+	std::cout << recVel[0] << " " << recVel[1] << " " << recVel[2] << " " << recVel[3] << " " << recVel[4] << " " << recVel[5] << std::endl;
+
+        //std::cout << "Recebido: " << dataReceiver.friend0veldir() << dataReceiver.friend0velesq() << dataReceiver.friend1veldir() << dataReceiver.friend1velesq() << dataReceiver.friend2veldir() << dataReceiver.friend2velesq() << std::endl;
 
         //std::cout << state << std::endl;
 	    //std::cout << state.ball << std::endl;
 	    //std::cout << state.teamYellow[1].speedX << std::endl;
         //std::cout << "ta funcionando =) " << dataYellow.yellow1posex() << std::endl;
-        send_commands();
-        send_debug();
+        send_commands(recVel);
+        //send_debug();
     }
 
     return 0;
 }
 
-void send_commands(){
+void send_commands(int *vel){
     Command command;
 
     for(int i = 0 ; i < 3 ; i++){
-        command.commands.push_back(WheelsCommand(i*40, i*30));
+        command.commands.push_back(WheelsCommand(vel[2*i], vel[2*i+1]));
     }
 
     commandSender->sendCommand(command);
